@@ -1,0 +1,3084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRON GYM — Management System</title>
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAAea0lEQVR42u19aZBm11ne87zn3Hu/7+t9umeXhJGNUCxvMmDACxgSktjxiglQJixlQlVwUUk5yR/yIz+ochKCq0g5SwULRdgYXNlYjI2MYwIulhAwsS2DLdvIkiXNvvT08vX33XvPeZ/8uN0zPZoeaXpmWuoxfWpqpvub+9177nnPuz3vcoC9sTf2xt7YG3tjb+yNvbE39sZft8GvhYnrFiaA7e3BPQ64jhmTAAhJAMj1t+h+1cYn3a97BLhpI9BAZjj8KitrJGiCIBHyPQLchAmGIAckC1GxQV1F3hH79/Qmj5b9OSOYl5jPNenxUf3oeHgqJWdFc6FFBgEHxN2rJ3Y7AQrAYQhFzqlf+Kun971hMH8Pi+mASl7khsxAlRmWg06m8R82oweXlx5eGxWIbXAJcN/F67+7CWAkTTnEkPzeXv+H54/cWw5mm1HSSKlyM9EhZBZB7nSVKMzOpvih4eKHLpxMGYyWUwpC3rVydVeLHzKSSv66mfl/ceD2F2ayGWfIFKMsG6lQeoDlABroMmvTbE4vnt53ZzH5xeFwJbcidzMHhF3IkgFQ6AhQwP3v7Zv7Zwu3H1zJYyYYA2iyHFwQKZkTDoqUQSBbQ6zre2LvwOzEp9eWx9kQtGt5fTdygAgTDHTkl09N/PTC1081qxkesW5vOmGigezWdf3f9f81kGTjzR1Vb6qc/JPhuRQK+i41iXYfAQgYSg8ZOhDsXUfveMUyRmxpCjJx/ZJOqkgS4ITAdQ/gIhWNvVHzgt7UE2wfHa7JuDvdgt3nCQsBAIMbXjdz4NW5dy62hYroIV+SIhI8GPtFMYhFGaIBgHyTmDHZqCiKNHz75P6DwVziHgdcq+kptMEOB/7U/kPzKSeChECZZ0OZ4Oa5rB4O+ZNp7dNNu8gwUVZzrgYNGYIgQoDIrHygCI8AD4/WKlimdpsuiLtSB5hyelF/5vlWtVqLMAEkgjMARDzTK3/1wrnfv3DyCWXQevIX9wc/euDoa9JEnWuAJmQToeChTOkVk3OfOH92TFDYbYywG8E4IRJ6cX96qskXAR0BlEXnysTgg+dPfPDCsScsG1k5W8Y/G47e8/hX/jwIRcwQBZMIRYXk+e5YHCpCSxUI3CPAMw4HA+1IVQHZbZPgB1XET9fLH14+M8Gql6PLakPw1GP5GPzXzh1PoTOJSMAkiaPgs6aDVQXCYLtNE+w6AhAQ2j7jPrMEmS7NMNsYFv54bWklYy2nsTLckT0DLRLBh4fLx3KqYM7cMgjmIRde9NwnLcAtWd5tMmg3EgCA0Wj0yz4XoJZaTYkGyCF1XOGGQg7ZeWgFOUdmglo3VukkUJhBgMltjwOeQQFAQIaS586YWSeAaG4kDsJEWAyXwgCAwwI0wzgVqix1rtwm0YWRMrAbLdFdGREjWm+HbSO7tMQATLTsL5ucmwEMsg3tHHLRFlHIL+lPHFUZmtxR7KJrVkPnvQVB33Wo0G7kgABr5F92NxLIF+VSCuVY41cU/TfMHGxSzgE0qxAVIG9ut/DGA4cHbe3G4BbcAatDWUqnUZytnfCGoO8uNtidjhizcWD8m719MSXnOtZTZUshD5rmrslZhupss7YsSKFv6eW9iXcevuNbspByF5Ak4UYIpdmnWv/ohdM5GIQo+J4j9gxKmG4sPr+28hfz+qYQsxJAJ8ZRrYVhmefHw3dNzfztmd6XxuPU4rY4uLtXzacx2iZZcUkxMBc5Dyf6f3Tu/Ag0GT37LpNBuxGOzkRPYclTVdirq0nPyWAiRJ9ozFkkWqv6aA4v5eCFZe92hioNszyzB7oBJoh0qjI+rPp9Z86MEA1yuGx3qYFdGZAxAirAY/X4rtmZu9pyZNkNZSbYoaUwUUKtXCtlJJGigXKizHLDKHLQhFG/+o+LJx4aNbTsSpcU+h4Bnp4NBARwKP9qar5zcqqIy/JQKGRuYNEb/q6BXP8DA4tcNoFt8DI3vbL4UNP817OnGeDKe/GA7QISCgxnm/Y01r59YqGCkitsgJlbmvQCU2B09GsMiv5vYfW9J59cYQGlXZuhsotjwoQIBn5x3DwBfcPU5EGPcBc7t2xrzjG1/RzOz0z+Wlr6+dPHzluukjKh3RoV3tVBeXTocbDHhqMvDdPEYHK+DIW3VAhiJ46eKrkYHhnEB5ZPPnDq+IpgblmuXZw9ursJsL6mCrE429afGJ7ZV1X3lhOt2nV1vJlYUgjFZ8zefeKv/nB12Fik592fnWi7TOowhGBmmx1jOJKnZGw8nBq3UaEOnq8QQSIK2FKjL6TWQxnyZWKfJEkzMzPuppiA7Z61NwBEdr+SCSyL2SkfVRK9n662hE4mA4rcyPKV0Ue6w8Klz3cBJXYLAQpEGqYCXzV/qDB7CjrkgCBB0UXhaoFdQtkUHZnunRLf5F5PFMWr5+ZLF8yCsUQgiz0CdJOgwVTiJw4/7/sn55ETriImOgT0OmBlMg6yfvDI0R+cnonJYWVEKDz/tSYAN/6WMaD5qblD77Rpr5dabrHDddmXtlxiXk24E5Dk0v7l1Z84cOiN8/OW6pF5y/w039qNBLi5MxURSJoF6B2Hv+5HevvWfDlFizfdbBQEtWYtbW51/K65g2/Zt1B6Yihu1svxeu9i23oG179ycwgRSYA9+E8dvP1HBtNN0xAWc9Q2t6QTJtDlUvAuYw62SVGIIBQkURnWG4/fOb//LfsWmBEQKRC0GxMG3JCkYecIIMCtw4pvwgY1MnoB+E8euONHy0msDUUzdXmGOyjxQLrCxKj9kcNHv39mypUVSxrtxjLY3dbD1sl2igCE0YD9IfQt3KDcNNBCCNa889DX/Vjc16ZaZlFyIu8QAdTVL63nGcWMQ0urP37w8JsXFspUe2QOuM6XIgOJgArcjxjIbekVu/YdCxKOe+f2v2jfgiTj9eTYWBerouD+jw4c+YfVdJvWgverbDuiZ7bkAyqbucLc6vhdMwe+b/ZA2WTdQMpQl6E9C77uyAumGLalwrbBMMHlCHcg/vi+hQXSrRe3j2REgsYZ4R8vPO/t/flUr+UgWO3mAIIQfMezN6nOR5CDU6PRT84feNO+hcKl6+IAQm6Glq+c3fc9/YkCAG0HCKDuriro95q9Yd9c9CbFars7trEg19sOHPmx/nRYW8vBuJGK8px43/QwuTZ6x+HbXjs9LffrkEIE3f35ofe2uaP7m1FlwHYysW0bu0YAfMIwsbb6prlD9xSFciLDtTv0BEzBgKP9QR2HbdxI+H/ukL61ItSWDozbo73e9QkfkZX01oVDL0xtmdsBK+yQCOruOiBr4HC2t+w/OlAD8wLbUF+CO1DWKlPheI6Ltwwo3U0WW+Z0mb93TTsfNAa5v3Cy/93Tk2hXFGKxTXhjGwRogQBUFslozep398pXTU+ry/Vjp8P4jCQkHOK4bCt3PteZapluciJ4TF2+ELclegjA5oz/YOHgwfFagxAJs3Zbt7ke7yNmFJnTtb5v39EDCLWV9NClaV47M+0SnP66pxGcDJZj+/rJhddgus05iAEMDNgRM3QT6YMEWmzzy2FvnlkIuYGFoO3w7tfCsCw83+LbZg9MjkdGC+S6+y3tKAcQQCZTQGxHb5mafX6vcMukbY+Bb8HBDUDGwGwWc/6B2UN3kiuhNXEjGXV7THXtBHBSGcyubEFAppLsTtlb5w9XWTKza+E7dZUTu69Yazs0CCCYv2lq4rWT0ymNwUiZE8k8KXfo605wAEHVcG2KKI3T2puq6W+fnM5J0SO+poeAIFTO1jST/ftnj86nYI6oLk0jJFoXK9VN5wBuXForOy9B+XWwibZ+2/zBhWDpa0W6P80qBJIWIf2d2X2vij0bN240JxWcNk4+znmHRND66g79MjMrqKo9fYcXr59ZcG/tUpraTpgeu4AE4ph2pCzeOnewbEcpKBvVYX1CbWhThu+AEl4X2cKihE11W9EpY9mM3jqz8PVl4YBZ5NNgROwKeHcOdd5ZzzmFELLePH/wG+XZRSq4QDi9RF4OOblgph3ggPWNe6HNzSZRY3KRQ+obm/D2uSMMKsUS/jXZjC4gJNeL+7239ve51+DmAp4caCs5rWh7FSDXzAGUUWS84GpwqQFMHR1gU4Sxht8zMXhlNWg8O5/OJxO0e0oktgM9wI2z8B9YOHykTqHdHHFzMJNYbtuhthdQvfaNKomChjmNjBtul4I0NcagZbI8k9ofmL9tskAbEK4CM3TwQ9HhF+s5zs/liJ1FLD6jAWExuNJrpudfW0ysqiGqy2hDp+xCctn2so2uHY5GlkF5tRmfM5UyrD8V4wLJZAo55W+26g2T85YcYSO5h0/BDk2UeUjWuQNcx1mfC43gVDZPwSG/Ks/SgEhjJg/H6i3zB6fHKzl42iR/glsyZBanstZTMHbADxABkkspncl1G9mh3hc3uoBCPjdce9vMkbtiL7tfuacECCkATcVMdO0Nn0OXysnWAgRapvnVzY8AFGWbvm/+0DfndhVjgxW++T4yYS3iZFNvtwLNtjFfAFYMpZPNWlvwKTuGQGPVMPqdzG86dKSUYLYVyzMKT7TjYdV/bp3hzqvqtRZUrrL/1VZXUQpuzPJ072DiTf2ZULcKVZHplp+iIFeoE6mBCmwHn99WPEAG1MDxps0hUNDlX6eiW4xrq28oJl4xNZuVI8NTpHxrVsfw4LEnf2P1Avo9h5ubqC615GI/pmeFAawOStaOe/0PnD/1B8NFhuBbWD706JPmf3/h4MF6tBILKgZH2mRqZrKSLeV0um23DeltgwB0eALwaI01WCAc4bItw5bAKMZ9Tf32hcOzMRBm5GVOgSdQi+ADx499ZLzM3kByp0AEx3rO806KpQ6wdCK4yqRcle9fOn7/hdOUeKXgJgILZX7X/L7vst6YdZQH5WyXlYhksnQ7XjeLORuz74wOWGcCAMfHq2fh6kiw1R1H7t+M3vfOHMxo9RRZJSA7jMtBP3f6xEfHyxrQkkHPWniGlGXLpraME7+0unLfyqnAEjK/MjEbbNE+38Lbp4+Etk1WbDnHmDWu4hfzWu3abm7FNgkgETyR2hOpgUVzXN6o7dI79uvl100tHCkrZn+qZ+Jw91Z5hXrP6cc/0WT1y4yNgpeNiLZ2QOgDcMKJXuvDqblfGF+4/+yxXq4gtSFf7ZW/e/+hlyZvUEfFLW9bOFaCf74ZARHSThIAILDs6StrIzNky9iq7lZAE/I88hxDuKKei50cyF5kX/H4s6e++n98NIhVltTVA++IE4tS65aw5Sb1pz68dP79Z44lC+7ehFS1V/Vgj1i0PHazLVNmBJTQeenLo9F1NAzfhh/QLUx3/8+Nxg0dlq9W5GS5cOYE5isu6PL9HXAFmlaU3nP8yU/AJ6xqODZ6xDbDs9egcRWU4Mk8qG0HvQ/VS79w+rGWBleLhKR6K55bl57uyaxqC+fWNqaiPVLnk8lh7XadfLseVia+PFp+1DRIxdMZ8s+0FzJlyYPj8dS859hjfxzHvZjkXfnRzSzuopBla9FjTm1v4sNt+4FjX12MRfYuo/eGHmXSalk+tDZsPIXtB5rsOiRpgB3L6bP1WmRRh6s9cMMSuLpJTMmBWmYM57P+5emvflZ97/Ua+M1t7UPB3PtJRTn7G6m978lHLlhBUF3t/DN6P7p68QEZhAvg/xuNYMG6ROwd5gAQlMJDSxeWyxAutU69ytyvzgiERDlJB5mPj/Xu4yceyt5juLk6WITTYfG3x6P3nnz0rDE6Yko38hQKArIUi/hX7eiR8Rq4Xkq1PTDqOp7dCf6HRsMvhXRvzaHJDUW+ErmwjhGutid8fbY5AyPBgC+N8xPHnpQF5JtZPCTBjKtZv3L8scZbo43R3ihXAU7G5OMifnL1zJra4MwA6DuEhl4apbICnvD86eWVtV4pKN54Rq3gAMk2NW1KN7lsiHByTE/INLspxcOZNGHg9jj5qeUVwvy6bns9BEgdpk/75PL500EBsisDMMRGn6VtzKuVampLxUhcE0rBq9kNLkEOwXXjBBBQOOFameKfjpcea5uuJ+CzRIBMeHbKvjAefXptrQxlUOsgtdHGvKsWoYtbqwYDu4qDDu8lya5SkgqQGWhgAA0VGIGLaH2iOz1cbrJvzq9ug7GDvGFdi3UzREPsmty4gmAMNIOxmwKBCMarL8Xmalddkp85mJ8owu8vnnGL12212XVuADiVRsCDFxbPx7JUdgAwrsc3QLiYdTGF8jLO6J4czFAYSkNBRFXBK0dMoDzAg3KQx4aWYpSFaKWhV4ig2nCFPmTX9F5VbgJhhkAr1DMv3C05WtEzXUygiybrKw4QYyADPMivHsfVRoBvc2hDbGMMD620D43Hhg0HYfuBjXgjbEizzwwv/H7a/73FdEiNB49OPa0fsK6iDBacObor00FNM82U5SAUfbPKmN0z1Ka86lrJaSnnMQFDYoBisibkK0EXQnBhrVtKz2Xw2RhnGacshLB+sFXrvux5mNNqTiMH3AItdE1Jn3b1dDkmVnhxznoPLn5lBEWl67YZbogABows/PqZ4684etfRYSv4JYtnAxG8vC0AC4RMZE/muV/gef3BvXHynmLqQE+z0eZkExmKbJGdyNKicdHz46l9dLz20HBlmlnQoKV4pasgkQHFi8Lgrn7/jonpOwssxGK/wkRSMIKQK0tDxrNIx9v20Wb8aa+fWF15sm26A8kCTfIr1akuxxgoNf3yo82FP10b0qJ70rNPgHVsjvaFteGDw3M/UfSLsTexLLN78K67WId8ETCYLAq5yVYqv7jsv3Rq4Tv75R1lMQPrp6xsuZGjdSrUKLC+xLNs7kL4FlY+OXF+av9ITdsmWdhKuTApvyTg39x251HPQTmm0LY5M2WK61uUBXxS44OMLwoV+/3W9JXZhU/Vw/+7dOFT49GKZ1pRZCUkbHQZ4gYOvC7rxB7wpagPHz+VLdzgwRA3TACkxPibZ0698uhtLydbuQiKbrBOXUNRZiwaec/ziwfVaxYOvaY38XUNLedUJwdW14v31vV33qSYXFULwB25mSKnaZnaUncRSMAEOVnXLdSsG59cD1ld2svWsAQAbyGFpOeFeHs5/fqD+x7O6WMrZ/730uIFegHLCIac4RsHpaA1JsNE2y5PTP23xRNfrRuLlt3tBiKrN5rNKRgYT7TtA4vnDu0/ujBcGRZWparIQoEIRCEXpra+u6zeNvu8vzU5NaUaayPPIVlXeonwjPYl108o0TOVX6nzJy4eL/MMHj0TQcnGzTTq74J/09TBvzuz8OFzJz+5vLQiMZTwmhuqPgWzlPrGB+vRR84tNoGS32DR9I2n03rwVkX8g6Wl5w8m3jHYx3o5d44xGUEBczm9ad/8G+cPvGAcfS0l5MCQQmm6VBR8LW9h1wD0Xcs1VxhlHplEnTOW9fCVLF4yf+jbZ2f++6mTnxvXZLD1mBJDTgOWfxHLD574wpBuUpeFeCNpTjfcMYswCIQbH1lZPTI58cIQUpKCCfY/ls/uC8VPH7zjrVP79q81racUAHNChnxZoOAaPN/L9hqv/5orRJdkAqzIVRs5Crls65ci3jN/tA18eLT8bVNz3+rFYsz97Iu96t+eO/Fn7XJc76oM3Rh0fhNalmnjPUbiX40W75mZu02WkMfQKsI7Fp73HbI6NV1jEltvzWTr3hgv9aC4prV6xuu3eU/islakJkSZMzSug7VeNDd3IOBoLg6XoWFbxOn7lo5/ZOksWbjnm9IJ/GZCLkWwFvayovqZw4fvHuFUTBVmp5s8DEO3eAtl43YOeksvPFVWXjD2U2Pl1C+OF+8786Q8Qrk1vylNqG9q0z6GYOF4O3pstPYNcwcOS2h9XDY08ZZK1uV6s0C0wcZA5cl6gw8MF//zmSdTjK5sumnprTeTABKCJxZ8PPuX11aePzs9X0QljzKnEQh+qxSHuVOOfnBVauvBxPuH5+87fTwjWM7d4azahQRAl/YsRoZjXn9huHrb5MwLWFrbZkpGt1tj/UW45Zg9hnh2UN6/dOpXT58ZFZHKWbi5+ZQ70jdUUjSeRvz08tJUz45OTFRSSK0zYvfzAJmFwjWI+my/9+9OnHzwwtk6FuYe/OYn1u9U41aTGblq6U+Wl54UDs3N7IcsycldRQNd1gGsk/wooLXB4Le8/fnjj36mXomM7pkSiVuGAE7Sc3SNQvmlteHnlhfR79/R60/Bs3JrLDpR2kFk5l2G/s0tF+gyFC4CCZtnJ0omCmUKdUQ2EBmoCxmq6svSfRdOffDUidNEJWT3znPZiaO5d3wvGlkhjBB6Sq+e7r9p9uCrbKZK4zWMGlrloUod/pMvumU365SXzU7ZZp9Pm9J7HDR5cBmpsjjp4X+OFz+6fPbcOLddT7vkeScNaO68RCUoKhpjYlPCXjsx9z0zM6+ycmC5TQnylig82kbQ42YR4GpOcWeLmQPwCK9QrvSKR5E/ubLyW8MzjzcNURpThphF7WxB1bMhjUlKMJKwCNZqLeJl/ak39+Zf3J+8w3wij3O2JHaHs+WNkntucrOvjwDahPlsmC+yrl9mNJktwz6b6j8YLv3ZyuLjuYWjQnApmSj4zvf+fjYIEMEMdbWtNMZM0ZIE4FBRvqyaeOnUvpeVOBBsMmPgzpwTlIEEFG7BUUeqS2eg0FXJboWKEjB3MWTAITej3ChTNiZYBAvAWounqEfS6POry58aDx8djy44aLEnNpaz/GKxjLrn6BYnwFMl0kXYkswSpB7CZODt/d4Ly4kXlBO3VcV8KBYQJjJkqZdyKhTa3CZz6yS4U2FL+701lZnmjEVgQIIa5iTUKE4rP5HqJ+r6C0376Hj4eG4adWh/B0ttHNv67Ha8f9YNQq7nlF18No0MzDnAMygYJhBnQzhYxPmymLNqwcJkwbvLiXs8lE0LKoWtCQAgOnLQ8X748+HKheTL7udSey7ls0mLbX1BbS1QAZAZDMruz23zoufUIl+v04MKGoWMwlkCLazVU22Pe3vTP3P70f3jttfCzZ1hy5cpUhpPFB8ar/6H4ydaGOBdBgwzDOgq29rocEGU8Jyf8LA7TtDoEt2FRLZkpqs7HokGQzAy2oVmfKSoXlJNWBo7yy2LcQUp+hPl4BdPHDuJEAijunQgQoKSKVHWnespw3PdtA7Pefv6i+yfu7iSJHd5d+SavEuSc5hzFOw3li4coymiDlsfC0P3KvT/aHnl8+04oHVvs3uW8sb95YBjXUUjC3+929dfO5HcneAX67VPDpcRBv222bJSxSw+yuJjF04oBnPcEuNWIIDkErJL9uDiya+GUGCwBQNIVsTfGZ5/uK2N1S1wfs+tQoCLC2zR/9Lb31sdNv1KaLoTJk1ZQGtpAD4C/9jiGYchNaL2OOBmw5YCPXx48fhjua7A0CkNuhNF9lRWvz1cfLxtTHIlaU8E3XQHwlVJX0H9sdXltpqpWqR1e5Qlqs/RP7507mKNyq3SPO3WIYCQiZYqMx9cPvNl5RBDHbM5mTXql7+7dPrJ5LCug9WuP6HuFtQBcCHLg+zJ1H505XRdFr2GiVYZ/hL+iQvnjPR1axa+R4Ad8hrGcAX7X0vnPotksaCSl9XHF8884bJNx0buEWBH3Xc7nfSJpXPDopp1fial3106i2Dugt9ivQBvPQJIkrtH/t7y2S+nNBwMfn3l9BljoSjeipvpFhwCaGE1ZyusmRx88PjjtQXmnG/ljqS32jCDYaYq75qaMXJvPZ7tUaA7MSIAkbyFm5SGW5UBLvpnJmlP8jwXjvFTf9gbe2Nv7I29sTduMV12g41hNlsg273VtXx3Swtn88XPeMHNervre8SN3+EaLNkQrs8VIhljNLNn2CDbufnT32373p5d+XSS1/6ULS/e/GHs9/vdS0qKMcYYR6PRNb62BPc8Ho8B9Pv9sizbtr22Lwpg09QpJTObmpoC0P18Gd4ArK2NNmeOmFlVVWbrPc3MrG3bbgIXx+TkZPd5N5NrmY+7zFgWZco5pdbMBBg5Ho/zVr27YoxFUVxs9Nrv9yXVdX0Za3bpSDnXdb0lmjIYDADEP/2TPyRdrlgOvvDw57/ylUdf//o3tPUwBBMgqita0Ea2tzY5QZLa1j/+Ox//1z/7c2VVPXD//XfeeWdqazMTszaS4NaPeyCkzd/F8uraf3nggV964Jdf9KJ73vvv31sWgXLj+hckxbL/rne962Mf+0QIIedMWhHDr/7K+++++xvbekQrxPhDP/TDn/vcQ2bm7mYm6fDhQ/fff9/c3Kxf6jGPp5QkX3wX0QB6VlX1P/KR33zh37j7zq+/M6Xanb3+5L9697s/8MsfDDHmlACQRnJ+fu6++973gm+4s23HEKtq8v777zt8+NDrX//G3A6N1lXz55yrwdTv/PZH/8k//efd9DYEhuXs3/qKb3vf+/4T0P5/2wbU43j1wJoAAAAASUVORK5CYII=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F1317;
+    --panel:#171C21;
+    --panel-raised:#1D2329;
+    --line:#2A3038;
+    --paper:#EDEFEA;
+    --paper-dim:#9AA3AC;
+    --amber:#E8A33D;
+    --amber-dim:#4A3A1E;
+    --teal:#4C9A8B;
+    --red:#C4604A;
+    --radius-sm:4px;
+    --radius-md:8px;
+    --spring:cubic-bezier(.32,1.56,.64,1);
+    --spring-soft:cubic-bezier(.22,1.12,.36,1);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+    font-weight:600;
+    margin:0;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;}
+  button{font-family:inherit;cursor:pointer;}
+  ::selection{background:var(--amber);color:var(--ink);}
+
+  /* ---------- App shell ---------- */
+  .app{
+    display:grid;
+    grid-template-columns:232px 1fr;
+    min-height:100vh;
+  }
+  .rail{
+    background:var(--panel);
+    border-right:1px solid var(--line);
+    padding:24px 16px;
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+    position:sticky;
+    top:0;
+    height:100vh;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:0 4px;
+  }
+  .brand-mark{
+    width:34px;height:34px;border-radius:50%;
+    border:2px solid var(--amber);
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+    animation:brandPop .5s cubic-bezier(.34,1.56,.64,1) both;
+  }
+  .brand-mark svg{width:16px;height:16px;}
+  .brand-name{font-size:16px;line-height:1.1;}
+  .brand-name span{display:block;font-family:'Inter',sans-serif;text-transform:none;font-size:10px;color:var(--paper-dim);letter-spacing:0.03em;margin-top:2px;font-weight:500;}
+
+  nav.railnav{display:flex;flex-direction:column;gap:2px;flex:1;position:relative;}
+  .nav-indicator{
+    position:absolute;left:0;width:3px;border-radius:2px;background:var(--amber);
+    top:0;height:0;opacity:0;
+    transition:transform .38s var(--spring), height .38s var(--spring), opacity .2s ease;
+    pointer-events:none;
+  }
+  .navbtn{
+    display:flex;align-items:center;gap:12px;
+    background:none;border:none;color:var(--paper-dim);
+    padding:10px 10px;border-radius:var(--radius-sm);
+    font-size:14px;font-weight:500;text-align:left;
+    transition:background .18s ease, color .18s ease, transform .15s var(--spring);
+    position:relative;overflow:hidden;
+  }
+  .navbtn svg{width:17px;height:17px;flex-shrink:0;opacity:.85;transition:transform .25s var(--spring);}
+  .navbtn:hover{background:var(--panel-raised);color:var(--paper);transform:translateX(2px);}
+  .navbtn:hover svg{transform:scale(1.1) rotate(-2deg);}
+  .navbtn.active{background:var(--panel-raised);color:var(--paper);}
+  .navbtn:active{transform:translateX(2px) scale(.97);}
+  .navbtn[disabled]{opacity:.3;cursor:not-allowed;}
+  .navbtn[disabled]:hover{background:none;color:var(--paper-dim);}
+
+  .rail-footer{border-top:1px solid var(--line);padding-top:16px;}
+  .role-switch label{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--paper-dim);display:block;margin-bottom:6px;}
+  select#roleSelect{
+    width:100%;background:var(--panel-raised);border:1px solid var(--line);
+    color:var(--paper);padding:8px 10px;border-radius:var(--radius-sm);
+    font-family:'Inter',sans-serif;font-size:13px;font-weight:500;
+  }
+
+  main{padding:32px 40px 64px;max-width:1180px;}
+  .topline{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px;gap:24px;flex-wrap:wrap;}
+  .topline h1{font-size:28px;}
+  .topline p.sub{color:var(--paper-dim);font-size:14px;margin-top:6px;max-width:520px;line-height:1.5;}
+  .clock{font-size:13px;color:var(--paper-dim);text-align:right;}
+  .clock .time{font-family:'IBM Plex Mono',monospace;font-size:18px;color:var(--paper);display:block;}
+
+  section.view{display:none;}
+  section.view.active{display:block;animation:viewFade .38s ease both;}
+
+  @keyframes viewFade{
+    from{opacity:0;transform:translateY(8px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+  @keyframes cardIn{
+    from{opacity:0;transform:translateY(10px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+  #view-dashboard.active .grid.cols-4 > .card{animation:cardIn .45s ease both;}
+  #view-dashboard.active .grid.cols-4 > .card:nth-child(1){animation-delay:.02s;}
+  #view-dashboard.active .grid.cols-4 > .card:nth-child(2){animation-delay:.08s;}
+  #view-dashboard.active .grid.cols-4 > .card:nth-child(3){animation-delay:.14s;}
+  #view-dashboard.active .grid.cols-4 > .card:nth-child(4){animation-delay:.2s;}
+
+  /* ---------- Cards / grid ---------- */
+  .grid{display:grid;gap:16px;}
+  .grid.cols-4{grid-template-columns:repeat(4,1fr);}
+  .grid.cols-3{grid-template-columns:repeat(3,1fr);}
+  .grid.cols-2{grid-template-columns:repeat(2,1fr);}
+  @media (max-width:900px){
+    .grid.cols-4{grid-template-columns:repeat(2,1fr);}
+    .grid.cols-3{grid-template-columns:repeat(2,1fr);}
+    .grid.cols-2{grid-template-columns:1fr;}
+  }
+
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    padding:18px 20px;
+  }
+  .stat .num{font-family:'Oswald',sans-serif;font-size:34px;font-weight:600;}
+  .stat .num.skeleton{
+    color:transparent;display:inline-block;min-width:56px;border-radius:4px;
+    background:linear-gradient(100deg, var(--panel-raised) 30%, var(--line) 50%, var(--panel-raised) 70%);
+    background-size:200% 100%;
+    animation:shimmer 1.3s ease-in-out infinite;
+  }
+  @keyframes shimmer{
+    0%{background-position:180% 0;}
+    100%{background-position:-20% 0;}
+  }
+  .stat .label{color:var(--paper-dim);font-size:12px;margin-top:4px;}
+  .stat .delta{font-size:12px;margin-top:8px;}
+  .delta.up{color:var(--teal);}
+  .delta.down{color:var(--red);}
+
+  .panel-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;}
+  .panel-title h2{font-size:15px;letter-spacing:.03em;}
+
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th{text-align:left;color:var(--paper-dim);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:8px 10px;border-bottom:1px solid var(--line);}
+  td{padding:10px 10px;border-bottom:1px solid var(--line);}
+  tr:last-child td{border-bottom:none;}
+  .pill{display:inline-block;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:.02em;}
+  .pill.ok{background:rgba(76,154,139,.15);color:var(--teal);}
+  .pill.warn{background:rgba(232,163,61,.15);color:var(--amber);}
+  .pill.bad{background:rgba(196,96,74,.15);color:var(--red);}
+
+  .btn{
+    background:var(--amber);color:#221605;border:none;
+    padding:9px 16px;border-radius:var(--radius-sm);
+    font-size:13px;font-weight:600;letter-spacing:.01em;
+    transition:filter .15s ease, transform .12s var(--spring), border-color .15s ease;
+    position:relative;overflow:hidden;
+  }
+  .btn:hover{filter:brightness(1.08);}
+  .btn:active{transform:scale(.96);}
+  .btn.ghost{background:none;border:1px solid var(--line);color:var(--paper);}
+  .btn.ghost:hover{border-color:var(--paper-dim);}
+  .btn.small{padding:6px 12px;font-size:12px;}
+  .btn:disabled{opacity:.4;cursor:not-allowed;}
+  .btn:disabled:active{transform:none;}
+
+  .ripple{
+    position:absolute;border-radius:50%;
+    background:rgba(255,255,255,.4);
+    transform:scale(0);
+    pointer-events:none;
+    animation:rippleAnim .55s var(--spring-soft) forwards;
+  }
+  @keyframes rippleAnim{
+    to{transform:scale(1);opacity:0;}
+  }
+
+  input,select,textarea{
+    background:var(--panel-raised);border:1px solid var(--line);color:var(--paper);
+    padding:9px 11px;border-radius:var(--radius-sm);font-family:'Inter',sans-serif;font-size:13px;width:100%;
+  }
+  label.field-label{font-size:11px;color:var(--paper-dim);display:block;margin-bottom:5px;text-transform:uppercase;letter-spacing:.04em;}
+  .field{margin-bottom:14px;}
+
+  /* Coach cards */
+  .coach-card{display:flex;flex-direction:column;gap:10px;transition:transform .15s ease-out, border-color .2s ease;animation:cardIn .4s ease both;will-change:transform;}
+  .coach-card:hover{border-color:var(--paper-dim);}
+  .coach-head{display:flex;gap:12px;align-items:center;}
+  .avatar{width:46px;height:46px;border-radius:50%;background:var(--panel-raised);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:16px;color:var(--amber);flex-shrink:0;transition:transform .2s ease;}
+  .coach-card:hover .avatar{transform:scale(1.08);}
+  .coach-name{font-size:15px;font-weight:600;}
+  .coach-spec{font-size:12px;color:var(--paper-dim);}
+  .tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px;}
+  .tag{font-size:10.5px;background:var(--panel-raised);border:1px solid var(--line);padding:3px 8px;border-radius:12px;color:var(--paper-dim);}
+  .coach-actions{display:flex;gap:8px;margin-top:4px;}
+
+  #coachGrid .coach-card:nth-child(1){animation-delay:.02s;}
+  #coachGrid .coach-card:nth-child(2){animation-delay:.07s;}
+  #coachGrid .coach-card:nth-child(3){animation-delay:.12s;}
+  #coachGrid .coach-card:nth-child(4){animation-delay:.17s;}
+  #coachGrid .coach-card:nth-child(5){animation-delay:.22s;}
+  #coachGrid .coach-card:nth-child(6){animation-delay:.27s;}
+
+  .choice-toggle{display:flex;border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;margin-bottom:22px;width:fit-content;}
+  .choice-toggle button{background:var(--panel);color:var(--paper-dim);border:none;padding:10px 18px;font-size:13px;font-weight:500;transition:background .2s ease, color .2s ease;}
+  .choice-toggle button.active{background:var(--amber);color:#221605;font-weight:600;}
+
+  .modal-backdrop{position:fixed;inset:0;background:rgba(6,8,10,.7);display:none;align-items:center;justify-content:center;z-index:50;padding:20px;}
+  .modal-backdrop.open{display:flex;animation:backdropFade .2s ease both;}
+  .modal{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-md);padding:24px;width:100%;max-width:400px;}
+  .modal-backdrop.open .modal{animation:modalPop .28s cubic-bezier(.2,.9,.3,1.1) both;}
+  .modal h3{font-size:16px;margin-bottom:16px;}
+  .modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:6px;}
+
+  @keyframes backdropFade{from{opacity:0;}to{opacity:1;}}
+  @keyframes modalPop{from{opacity:0;transform:scale(.93) translateY(8px);}to{opacity:1;transform:scale(1) translateY(0);}}
+
+  .toast{position:fixed;bottom:24px;right:24px;background:var(--panel-raised);border:1px solid var(--amber);color:var(--paper);padding:12px 18px;border-radius:var(--radius-sm);font-size:13px;box-shadow:0 8px 24px rgba(0,0,0,.4);z-index:60;max-width:320px;
+    opacity:0;transform:translateY(14px) scale(.96);pointer-events:none;transition:opacity .3s ease, transform .4s var(--spring);}
+  .toast.show{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
+
+  .empty{color:var(--paper-dim);font-size:13px;padding:18px 4px;}
+
+  /* Workout builder */
+  .builder-row{display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end;margin-bottom:22px;}
+  @media (max-width:700px){.builder-row{grid-template-columns:1fr;}}
+  .exercise-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:0 10px;font-size:13px;padding:10px 0;border-bottom:1px solid var(--line);}
+  .exercise-row.head{color:var(--paper-dim);font-size:11px;text-transform:uppercase;letter-spacing:.04em;}
+  .exercise-row:last-child{border-bottom:none;}
+  .exercise-row:not(.head){animation:rowIn .3s ease both;}
+  @keyframes rowIn{from{opacity:0;transform:translateX(-6px);}to{opacity:1;transform:translateX(0);}}
+
+  #suppRecommendGrid .card{animation:cardIn .4s ease both;}
+  #suppRecommendGrid .card:nth-child(1){animation-delay:.02s;}
+  #suppRecommendGrid .card:nth-child(2){animation-delay:.08s;}
+  #suppRecommendGrid .card:nth-child(3){animation-delay:.14s;}
+
+  .plan-card{border:1px solid var(--line);border-radius:var(--radius-md);padding:18px;background:var(--panel);transition:transform .15s ease-out, border-color .2s ease, box-shadow .2s ease;animation:cardIn .4s ease both;will-change:transform;}
+  .plan-card.selected{animation:methodPick .3s ease;}
+  .plan-card .price{font-family:'Oswald',sans-serif;font-size:30px;margin:6px 0 2px;}
+  .plan-card .price small{font-family:'Inter',sans-serif;font-size:12px;color:var(--paper-dim);text-transform:none;}
+  .plan-card ul{list-style:none;padding:0;margin:14px 0;display:flex;flex-direction:column;gap:8px;}
+  .plan-card li{font-size:13px;color:var(--paper-dim);padding-left:16px;position:relative;}
+  .plan-card li::before{content:'—';position:absolute;left:0;color:var(--amber);}
+  .plan-card.selected{border-color:var(--amber);box-shadow:0 0 0 1px var(--amber);}
+
+  .method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0 22px;}
+  @media (max-width:700px){.method-grid{grid-template-columns:repeat(2,1fr);}}
+  .method{border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px 10px;text-align:center;background:var(--panel-raised);font-size:12.5px;font-weight:500;transition:border-color .18s ease, color .18s ease, transform .15s var(--spring);position:relative;overflow:hidden;}
+  .method.active{border-color:var(--amber);color:var(--amber);animation:methodPick .28s ease;}
+  .method:active{transform:scale(.96);}
+  @keyframes methodPick{0%{transform:scale(.94);}60%{transform:scale(1.03);}100%{transform:scale(1);}}
+
+  .nfc-zone{
+    border:2px dashed var(--line);border-radius:var(--radius-md);
+    padding:40px 20px;text-align:center;margin-bottom:24px;
+    transition:border-color .2s, background .2s;
+  }
+  .nfc-zone.scanning{border-color:var(--amber);background:rgba(232,163,61,.06);}
+  .nfc-ring{width:72px;height:72px;border-radius:50%;border:2px solid var(--line);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;position:relative;}
+  .radar-ring{position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--amber);opacity:0;}
+  .nfc-zone.scanning .radar-ring{animation:radarPulse 1.6s var(--spring-soft) infinite;}
+  @keyframes radarPulse{
+    0%{transform:scale(.9);opacity:.65;}
+    75%{opacity:0;}
+    100%{transform:scale(2.4);opacity:0;}
+  }
+  .nfc-zone.scanning .nfc-ring{border-color:var(--amber);animation:pulse 1s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(232,163,61,.35);}50%{box-shadow:0 0 0 10px rgba(232,163,61,0);}}
+  .nfc-ring.success{border-color:var(--teal);animation:successPop .4s ease;}
+  @keyframes successPop{0%{transform:scale(.85);}45%{transform:scale(1.12);}100%{transform:scale(1);}}
+  .nfc-zone.success{border-color:var(--teal);background:rgba(76,154,139,.06);}
+
+  @keyframes rowFlash{
+    0%{background:rgba(232,163,61,.28);}
+    100%{background:transparent;}
+  }
+  tr.flash-in{animation:rowFlash 1.1s ease;}
+  tr{transition:background .2s ease;}
+
+  .scroll-reveal{
+    opacity:0;
+    transform:translateY(30px);
+    transition:opacity .6s var(--spring-soft), transform .6s var(--spring-soft);
+  }
+  .scroll-reveal.revealed{
+    opacity:1;
+    transform:translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce){
+    .scroll-reveal{opacity:1;transform:none;transition:none;}
+  }
+
+  /* ---------- Check-ins overview line chart + Membership donut ---------- */
+  .donut-wrap{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+  .donut-legend{display:flex;flex-direction:column;gap:9px;flex:1;min-width:150px;}
+  .legend-row{display:flex;align-items:center;gap:8px;font-size:12.5px;}
+  .legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+  .legend-label{color:var(--paper);flex:1;}
+  .legend-val{color:var(--paper-dim);font-size:11.5px;text-align:right;}
+  .chart-tip{position:absolute;bottom:10px;right:10px;z-index:70;background:var(--panel-raised);border:1px solid var(--amber);color:var(--paper);padding:7px 12px;border-radius:var(--radius-sm);font-size:12px;pointer-events:none;box-shadow:0 6px 18px rgba(0,0,0,.4);white-space:nowrap;}
+  .report-section{margin-bottom:14px;}
+  .report-section-title{display:flex;align-items:center;gap:8px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--paper-dim);margin-bottom:8px;}
+  .report-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);}
+  .report-row:last-child{border-bottom:none;}
+  .report-name{font-size:13.5px;font-weight:600;}
+  .report-sub{font-size:11.5px;color:var(--paper-dim);margin-top:2px;}
+  .report-actions{display:flex;gap:6px;flex-shrink:0;}
+
+  /* ---------- Dashboard charts ---------- */
+  .bar-chart{display:flex;align-items:flex-end;gap:10px;height:180px;padding-top:10px;}
+  .bar-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;min-width:0;}
+  .bar-num{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--paper-dim);}
+  .bar-track{flex:1;width:100%;max-width:38px;display:flex;align-items:flex-end;background:var(--panel-raised);border-radius:4px 4px 0 0;overflow:hidden;}
+  .bar-fill{width:100%;background:var(--paper-dim);border-radius:4px 4px 0 0;opacity:.55;transition:height .5s var(--spring-soft);}
+  .bar-fill.yday{background:var(--teal);opacity:1;}
+  .bar-fill.today{background:var(--amber);opacity:1;}
+  .bar-label{font-size:10px;color:var(--paper-dim);text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;}
+  .month-row{display:grid;grid-template-columns:36px 1fr 44px;align-items:center;gap:10px;padding:4.5px 0;}
+  .month-name{font-size:10.5px;color:var(--paper-dim);text-transform:uppercase;letter-spacing:.04em;}
+  .month-track{height:12px;background:var(--panel-raised);border-radius:6px;overflow:hidden;}
+  .month-fill{height:100%;background:var(--teal);border-radius:6px;transition:width .5s var(--spring-soft);}
+  .month-row.current .month-fill{background:var(--amber);}
+  .month-pct{font-size:11px;text-align:right;color:var(--paper);}
+
+  footer.credit{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--paper-dim);font-size:11.5px;}
+
+  ::-webkit-scrollbar{width:10px;height:10px;}
+  ::-webkit-scrollbar-track{background:var(--ink);}
+  ::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px;}
+
+  @media (max-width:820px){
+    .app{grid-template-columns:1fr;}
+    .rail{position:relative;height:auto;flex-direction:row;align-items:center;overflow-x:auto;padding:14px 16px;}
+    .rail-footer{border-top:none;padding-top:0;margin-left:auto;flex-shrink:0;}
+    nav.railnav{flex-direction:row;flex:none;}
+    .navbtn span{display:none;}
+    main{padding:24px 18px 48px;}
+  }
+
+  /* ---------- Admin feature additions ---------- */
+  .toolbar{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;align-items:center;}
+  .toolbar input,.toolbar select{width:auto;}
+  .toolbar input[type="text"]{flex:1;min-width:180px;}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px;}
+  @media (max-width:640px){.form-grid{grid-template-columns:1fr;}}
+  .tbl-actions{display:flex;gap:6px;flex-wrap:wrap;}
+  .stat-sub{font-size:12px;color:var(--paper-dim);}
+  .report-row .pill{white-space:nowrap;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  button:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--amber); outline-offset:2px;
+  }
+</style>
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+<base target="_blank">
+</head>
+<body>
+
+<div class="app">
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="rail">
+    <div class="brand">
+      <div class="brand-mark" style="border-color:var(--red);overflow:hidden;background:#000;">
+        <img src="data:image/png;base64,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" alt="IRON GYM logo" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="brand-name">IRON GYM<span>Gym Management</span></div>
+    </div>
+
+    <nav class="railnav" id="railnav">
+      <div class="nav-indicator" id="navIndicator"></div>
+      <button class="navbtn" data-view="dashboard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg><span>Dashboard</span></button>
+      <button class="navbtn" data-view="checkin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 12l2 2 4-4"/></svg><span>NFC check-in</span></button>
+      <button class="navbtn" data-view="coach"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg><span>Coaches</span></button>
+      <button class="navbtn" data-view="workout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16M4 12a2 2 0 100-4 2 2 0 000 4zM4 12a2 2 0 110 4 2 2 0 010-4zM20 12a2 2 0 100-4 2 2 0 000 4zM20 12a2 2 0 110 4 2 2 0 010-4z"/></svg><span>Workout plans</span></button>
+      <button class="navbtn" data-view="supplements"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.5 3h7M9 3v5l-4.5 8a2 2 0 001.8 3h11.4a2 2 0 001.8-3L15 8V3"/></svg><span>Supplements</span></button>
+      <button class="navbtn" data-view="payment"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 10h19"/></svg><span>Payments</span></button>
+      <button class="navbtn" data-view="roles"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg><span>Roles &amp; access</span></button>
+      <button class="navbtn" data-view="members"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><path d="M3.5 20c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/><circle cx="17" cy="9" r="2.4"/><path d="M15.8 15.4c2.8.3 4.7 2 4.7 4.6"/></svg><span>Members</span></button>
+      <button class="navbtn" data-view="nfcmgmt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M7 11h4M7 14h7"/><path d="M17 9.5a3 3 0 010 5"/></svg><span>NFC cards</span></button>
+      <button class="navbtn" data-view="history"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Check-in history</span></button>
+      <button class="navbtn" data-view="attendance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/><path d="M9 15l2 2 4-4"/></svg><span>Attendance</span></button>
+      <button class="navbtn" data-view="reports"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></svg><span>Reports</span></button>
+      <button class="navbtn" data-view="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 13.5a7.6 7.6 0 000-3l2-1.5-2-3.4-2.4.9a7.6 7.6 0 00-2-1.2L14.6 3h-4l-.4 2.3a7.6 7.6 0 00-2 1.2l-2.4-.9-2 3.4 2 1.5a7.6 7.6 0 000 3l-2 1.5 2 3.4 2.4-.9a7.6 7.6 0 002 1.2l.4 2.3h4l.4-2.3a7.6 7.6 0 002-1.2l2.4.9 2-3.4-2-1.5z"/></svg><span>Settings</span></button>
+    </nav>
+
+    <div class="rail-footer role-switch">
+      <label>Signed in as</label>
+      <select id="roleSelect">
+        <option value="admin" selected>Admin</option>
+        <option value="staff">Front Desk Staff</option>
+        <option value="coach">Coach</option>
+      </select>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main>
+    <div class="topline">
+      <div>
+        <h1 id="viewTitle">Dashboard</h1>
+        <p class="sub" id="viewSub">Today's activity across the floor, coaching, and inventory.</p>
+      </div>
+      <div class="clock">
+        <span class="time mono" id="clockTime">--:--</span>
+        <span id="clockDate"></span>
+      </div>
+    </div>
+
+    <!-- ---------------- DASHBOARD ---------------- -->
+    <section class="view active" id="view-dashboard">
+      <div class="grid cols-4" style="margin-bottom:20px;">
+        <div class="card stat">
+          <div class="num skeleton" id="statMembers">0</div>
+          <div class="label">Active members</div>
+          <div class="delta up">▲ 6 this week</div>
+        </div>
+        <div class="card stat">
+          <div class="num skeleton" id="statCheckins">0</div>
+          <div class="label">Checked in today</div>
+          <div class="delta up">via NFC tap</div>
+        </div>
+        <div class="card stat">
+          <div class="num skeleton" id="statCoaches">0</div>
+          <div class="label">Coaches on roster</div>
+          <div class="delta" style="color:var(--paper-dim);">3 available now</div>
+        </div>
+        <div class="card stat">
+          <div class="num skeleton" id="statLowStock">0</div>
+          <div class="label">Supplements low on stock</div>
+          <div class="delta down" id="statLowStockNote"></div>
+        </div>
+      </div>
+
+      <div class="grid cols-2">
+        <div class="card scroll-reveal">
+          <div class="panel-title"><h2>Check-ins Overview</h2><span class="sub" style="margin:0;" id="weekRangeLabel"></span></div>
+          <div id="checkinLineChart" style="position:relative;"></div>
+          <div id="checkinChartTip" class="chart-tip"></div>
+          <div id="todayVsYesterday" style="margin-top:12px;font-size:13px;"></div>
+        </div>
+        <div class="card scroll-reveal">
+          <div class="panel-title"><h2>Membership Status</h2></div>
+          <div class="donut-wrap">
+            <svg id="membershipDonut" width="160" height="160" viewBox="0 0 160 160" style="flex-shrink:0;"></svg>
+            <div id="membershipLegend" class="donut-legend"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:16px;flex-wrap:wrap;">
+            <span class="sub" id="membershipNote" style="margin:0;font-size:12px;"></span>
+            <button class="btn ghost small" id="btnViewReport">View full report</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid cols-3" style="margin-top:16px;">
+        <div class="card scroll-reveal">
+          <div class="panel-title"><h2>Recent activity</h2></div>
+          <div id="dashRecentActivity"></div>
+        </div>
+        <div class="card scroll-reveal">
+          <div class="panel-title"><h2>Members expiring soon</h2></div>
+          <div id="dashExpiring"></div>
+        </div>
+        <div class="card scroll-reveal">
+          <div class="panel-title"><h2>Recent payments</h2></div>
+          <div id="dashRecentPayments"></div>
+        </div>
+      </div>
+
+      <div style="margin-top:16px;display:flex;justify-content:flex-end;">
+        <button class="btn ghost small" id="btnResetAll">Reset all data — zero all graphs &amp; logs</button>
+      </div>
+    </section>
+
+    <!-- ---------------- NFC CHECK-IN ---------------- -->
+    <section class="view" id="view-checkin">
+      <div class="nfc-zone scroll-reveal" id="nfcZone">
+        <div class="nfc-ring">
+          <span class="radar-ring"></span>
+          <span class="radar-ring" style="animation-delay:.4s"></span>
+          <span class="radar-ring" style="animation-delay:.8s"></span>
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#E8A33D" stroke-width="1.8"><path d="M6 12a6 6 0 0112 0M8.5 12a3.5 3.5 0 017 0M12 12v.01"/></svg>
+        </div>
+        <h3 style="font-size:15px;margin-bottom:6px;">Hold your NFC chip near the reader</h3>
+        <p class="sub" style="margin:0 auto 18px;max-width:340px;">Tap a keychain, wristband, or card to log entry and pull up the member's plan for the front desk.</p>
+       <button class="btn ghost" id="nfcStatus">
+    Waiting for NFC card...
+</button>
+      </div>
+
+      <div class="card" id="lastCheckinCard" style="display:none;margin-bottom:20px;border-color:var(--teal);box-shadow:0 0 0 1px var(--teal);animation:cardIn .35s ease both;">
+        <div class="panel-title">
+          <h2 style="color:var(--teal);">✓ Last check-in</h2>
+          <span class="sub" id="lcAgo" style="margin:0;"></span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;">
+          <div>
+            <div style="font-size:10.5px;color:var(--paper-dim);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Member</div>
+            <div class="display" id="lcName" style="font-size:24px;color:var(--paper);"></div>
+          </div>
+          <div>
+            <div style="font-size:10.5px;color:var(--paper-dim);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Chip ID</div>
+            <div class="mono" id="lcChip" style="font-size:20px;color:var(--amber);"></div>
+          </div>
+          <div>
+            <div style="font-size:10.5px;color:var(--paper-dim);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Time in</div>
+            <div class="mono" id="lcTimeIn" style="font-size:20px;color:var(--paper);"></div>
+          </div>
+          <div>
+            <div style="font-size:10.5px;color:var(--paper-dim);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Time out</div>
+            <div class="mono" id="lcTimeOut" style="font-size:20px;color:var(--amber);"></div>
+          </div>
+          <div>
+            <div style="font-size:10.5px;color:var(--paper-dim);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Plan status</div>
+            <div id="lcPlan" style="font-size:15px;color:var(--teal);font-weight:600;"></div>
+          </div>
+          <div>
+            <div style="font-size:10.5px;color:var(--paper-dim);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;">Days left</div>
+            <div id="lcDays" style="font-size:15px;font-weight:600;color:var(--paper);"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card scroll-reveal">
+        <div class="panel-title"><h2>Today's entry log</h2></div>
+        <table>
+          <thead><tr><th>Member</th><th>Chip ID</th><th>Time in</th><th>Time out</th><th>Plan status</th></tr></thead>
+          <tbody id="checkinLogTable"></tbody>
+        </table>
+        <p class="empty" id="checkinEmpty">No check-ins logged yet — tap the reader above.</p>
+      </div>
+    </section>
+
+    <!-- Registration modal for unregistered chips -->
+    <div class="modal-backdrop" id="regModal">
+      <div class="modal">
+        <h3>Register this NFC card</h3>
+        <p class="sub" style="margin:0 0 14px;">Chip ID <span class="mono" id="regChipId" style="color:var(--amber);"></span> is not registered yet. Add the member details below to complete the check-in.</p>
+        <div class="field">
+          <label class="field-label">Member full name</label>
+          <input type="text" id="regName" placeholder="Enter full name">
+        </div>
+        <div class="field">
+          <label class="field-label">Plan status</label>
+          <select id="regPlan">
+            <option>Monthly — active</option>
+            <option>Quarterly — active</option>
+            <option>Annual — active</option>
+            <option>Monthly — expires in 2 days</option>
+            <option>Expired — please renew</option>
+          </select>
+          <p class="sub" id="regExpiryPreview" style="margin:7px 0 0;font-size:12px;color:var(--teal);"></p>
+        </div>
+        <div class="modal-actions">
+          <button class="btn ghost" id="regCancel">Cancel</button>
+          <button class="btn" id="regConfirm">Register &amp; check in</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------------- COACHES ---------------- -->
+    <section class="view" id="view-coach">
+      <div class="choice-toggle" id="coachChoiceToggle">
+        <button class="active" data-choice="gym">Choose a gym coach</button>
+        <button data-choice="personal">Bring my own coach</button>
+      </div>
+
+      <div id="coachGymPanel">
+        <div class="grid cols-3" id="coachGrid"></div>
+      </div>
+
+      <div id="coachPersonalPanel" style="display:none;max-width:480px;">
+        <div class="card scroll-reveal">
+          <h3 style="font-size:15px;margin-bottom:4px;">Register a personal coach</h3>
+          <p class="sub" style="margin:0 0 16px;">Personal coaches aren't on-site by default — an appointment is required so the front desk can grant floor access.</p>
+          <div class="field">
+            <label class="field-label">Coach full name</label>
+            <input type="text" id="pcName" placeholder="Enter coach name">
+          </div>
+          <div class="field">
+            <label class="field-label">Visit date &amp; time</label>
+            <input type="datetime-local" id="pcDatetime">
+          </div>
+          <div class="field">
+            <label class="field-label">Note for front desk</label>
+            <textarea id="pcNote" rows="3" placeholder="Session focus, equipment needed, etc."></textarea>
+          </div>
+          <button class="btn" id="btnRequestPersonal">Request appointment</button>
+        </div>
+      </div>
+
+      <div class="card scroll-reveal" style="margin-top:22px;">
+      <div class="panel-title"><h2>Manage coaches</h2><button class="btn small" id="btnAddCoach">+ Add coach</button></div>
+      <div style="overflow-x:auto;">
+        <table>
+          <thead><tr><th>Coach</th><th>Contact</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody id="coachMgmtTable"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="modal-backdrop" id="apptModal">
+        <div class="modal">
+          <h3 id="apptModalTitle">Book appointment</h3>
+          <div class="field">
+            <label class="field-label">Date &amp; time</label>
+            <input type="datetime-local" id="apptDatetime">
+          </div>
+          <div class="field">
+            <label class="field-label">What do you want to work on?</label>
+            <textarea id="apptNote" rows="3" placeholder="Goal, injury history, availability..."></textarea>
+          </div>
+          <div class="modal-actions">
+            <button class="btn ghost" id="apptCancel">Cancel</button>
+            <button class="btn" id="apptConfirm">Confirm booking</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------- WORKOUT PLANS ---------------- -->
+    <section class="view" id="view-workout">
+      <div class="card scroll-reveal" style="margin-bottom:22px;">
+        <div class="panel-title"><h2>Build a recommendation</h2></div>
+        <div class="builder-row">
+          <div class="field" style="margin:0;">
+            <label class="field-label">Goal</label>
+            <select id="goalSelect">
+              <option value="loss">Weight loss</option>
+              <option value="muscle">Muscle gain</option>
+              <option value="endurance">Endurance</option>
+              <option value="mobility">Mobility &amp; recovery</option>
+            </select>
+          </div>
+          <div class="field" style="margin:0;">
+            <label class="field-label">Experience level</label>
+            <select id="levelSelect">
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+          <button class="btn" id="btnGenerate">Generate plan</button>
+        </div>
+
+        <div id="planOutput"></div>
+      </div>
+
+      <div class="card scroll-reveal" style="margin-top:22px;">
+        <div class="panel-title"><h2>Manage workout plans</h2><button class="btn small" id="btnAddWPlan">+ Add plan</button></div>
+        <div id="wplanList"></div>
+      </div>
+
+      <div class="card scroll-reveal" style="margin-top:20px;">
+        <div class="panel-title"><h2>Assign plan to member</h2></div>
+        <div class="toolbar">
+          <select id="assignPlanSelect" style="flex:1;min-width:180px;"></select>
+          <select id="assignMemberSelect" style="flex:1;min-width:180px;"></select>
+          <button class="btn" id="btnAssignPlan">Assign</button>
+        </div>
+        <div id="assignedList"></div>
+      </div>
+    </section>
+
+    <!-- ---------------- SUPPLEMENTS ---------------- -->
+    <section class="view" id="view-supplements">
+      <div class="card scroll-reveal" style="margin-bottom:20px;">
+        <div class="panel-title">
+          <h2>Recommended for your goal</h2>
+        </div>
+        <div class="grid cols-3" id="suppRecommendGrid"></div>
+      </div>
+
+      <div class="card scroll-reveal" id="inventoryCard">
+        <div class="panel-title">
+          <h2>Inventory &amp; stock monitoring</h2>
+          <span class="sub" style="margin:0;">Staff &amp; coach access</span>
+        </div>
+        <table>
+          <thead><tr><th>Supplement</th><th>Category</th><th>In stock</th><th>Status</th><th></th></tr></thead>
+          <tbody id="inventoryTable"></tbody>
+        </table>
+      </div>
+
+      <div class="card scroll-reveal" style="margin-top:20px;">
+        <div class="panel-title"><h2>Manage supplements</h2><button class="btn small" id="btnAddSupp">+ Add supplement</button></div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>Supplement</th><th>Category</th><th>Price</th><th>In stock</th><th>Low threshold</th><th>Status</th><th>Actions</th></tr></thead>
+            <tbody id="suppMgmtTable"></tbody>
+          </table>
+        </div>
+        <p class="stat-sub" style="margin:12px 0 0;">A red "Low stock" pill appears whenever stock falls to or below the threshold — it also feeds the dashboard card.</p>
+      </div>
+    </section>
+
+    <!-- ---------------- PAYMENTS ---------------- -->
+    <section class="view" id="view-payment">
+      <div class="grid cols-3" id="planGrid" style="margin-bottom:26px;"></div>
+
+      <div class="choice-toggle" id="paymentToggle">
+        <button class="active" data-ppanel="paymain">Pay &amp; plans</button>
+        <button data-ppanel="history">Payment history</button>
+        <button data-ppanel="pending">Pending &amp; overdue</button>
+        <button data-ppanel="planmgmt">Manage plans</button>
+      </div>
+
+      <div id="payPanel-paymain">
+      <div class="card scroll-reveal">
+        <div class="panel-title"><h2>Payment method</h2></div>
+        <div class="method-grid" id="methodGrid">
+          <div class="method active" data-method="Cash">Cash</div>
+          <div class="method" data-method="Card">Debit / Credit card</div>
+          <div class="method" data-method="GCash">GCash</div>
+          <div class="method" data-method="Bank transfer">Bank transfer</div>
+        </div>
+        <button class="btn" id="btnPayNow">Confirm payment</button>
+        <span class="sub" id="paySummary" style="display:block;margin-top:10px;"></span>
+      </div>
+      </div>
+
+      <div id="payPanel-history" style="display:none;">
+        <div class="card scroll-reveal">
+          <div class="panel-title"><h2>Payment history</h2><button class="btn small" id="btnRecordPayment">+ Record payment</button></div>
+          <div class="toolbar">
+            <select id="payHistStatus" style="min-width:130px;"><option value="all">All statuses</option><option>Paid</option><option>Pending</option></select>
+            <select id="payHistMethod" style="min-width:130px;"><option value="all">All methods</option><option>Cash</option><option>GCash</option><option>Other</option></select>
+            <input type="date" id="payHistFrom">
+            <input type="date" id="payHistTo">
+          </div>
+          <div style="overflow-x:auto;">
+            <table>
+              <thead><tr><th>Date</th><th>Member</th><th>Plan</th><th>Type</th><th>Amount</th><th>Method</th><th>Status</th><th>Reference</th></tr></thead>
+              <tbody id="payHistoryTable"></tbody>
+            </table>
+          </div>
+          <p class="empty" id="payHistoryEmpty">No payments recorded yet.</p>
+        </div>
+      </div>
+
+      <div id="payPanel-pending" style="display:none;">
+        <div class="card scroll-reveal" style="margin-bottom:20px;">
+          <div class="panel-title"><h2>Pending payments</h2></div>
+          <div id="pendingPaymentsList"></div>
+        </div>
+        <div class="card scroll-reveal">
+          <div class="panel-title"><h2>Overdue &amp; expiring memberships</h2></div>
+          <div id="overdueRenewalsList"></div>
+        </div>
+      </div>
+
+      <div id="payPanel-planmgmt" style="display:none;">
+        <div class="card scroll-reveal">
+          <div class="panel-title"><h2>Membership plans</h2><button class="btn small" id="btnAddPlan">+ Add plan</button></div>
+          <table>
+            <thead><tr><th>Plan</th><th>Price</th><th>Duration</th><th></th></tr></thead>
+            <tbody id="planMgmtTable"></tbody>
+          </table>
+          <p class="stat-sub" style="margin:12px 0 0;">Editing a plan updates it everywhere it is used (plan picker, member records, renewals).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------- MEMBERS ---------------- -->
+    <section class="view" id="view-members">
+      <div class="card scroll-reveal">
+        <div class="panel-title"><h2>All members</h2><button class="btn small" id="btnAddMember">+ Add member</button></div>
+        <div class="toolbar">
+          <input type="text" id="memberSearch" placeholder="Search name, email, phone, or NFC UID…">
+          <select id="memberFilter" style="min-width:150px;">
+            <option value="all">All statuses</option>
+            <option value="active">Active</option>
+            <option value="soon">Expiring soon</option>
+            <option value="expired">Expired</option>
+            <option value="inactive">Inactive</option>
+          </select>
+        </div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>Member</th><th>Plan</th><th>Status</th><th>Expires</th><th>NFC UID</th><th>Registered</th><th>Actions</th></tr></thead>
+            <tbody id="membersTable"></tbody>
+          </table>
+        </div>
+        <p class="empty" id="membersEmpty">No members found.</p>
+      </div>
+    </section>
+
+    <!-- ---------------- NFC MANAGEMENT ---------------- -->
+    <section class="view" id="view-nfcmgmt">
+      <div class="card scroll-reveal" style="margin-bottom:20px;">
+        <div class="panel-title"><h2>Register / scan an NFC card</h2></div>
+        <div class="toolbar">
+          <input type="text" id="nfcScanInput" placeholder="Tap a card on the ACR122U reader, or type a UID…">
+          <button class="btn" id="btnNFCScan">Scan card</button>
+          <button class="btn ghost" id="btnNFCAddManual">Add manually</button>
+        </div>
+        <p class="sub" style="margin:0;font-size:12px;">Flow: ACR122U → NFC UID → NFC bridge / keyboard-wedge / Web NFC → Website → find member → validate membership → record check-in. The same UID can never be assigned to two members.</p>
+      </div>
+      <div class="card scroll-reveal">
+        <div class="panel-title"><h2>Registered cards</h2></div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>NFC UID</th><th>Assigned member</th><th>Status</th><th>Actions</th></tr></thead>
+            <tbody id="nfcCardsTable"></tbody>
+          </table>
+        </div>
+        <p class="empty" id="nfcCardsEmpty">No NFC cards registered yet.</p>
+      </div>
+    </section>
+
+    <!-- ---------------- CHECK-IN HISTORY ---------------- -->
+    <section class="view" id="view-history">
+      <div class="card scroll-reveal">
+        <div class="panel-title"><h2>NFC check-in history</h2></div>
+        <div class="toolbar">
+          <input type="text" id="histSearch" placeholder="Search member or UID…">
+          <select id="histResult" style="min-width:160px;">
+            <option value="all">All results</option>
+            <option value="valid">Valid / successful</option>
+            <option value="expired">Expired membership</option>
+            <option value="inactive">Inactive member</option>
+            <option value="unregistered">Unregistered card</option>
+          </select>
+          <input type="date" id="histFrom">
+          <input type="date" id="histTo">
+        </div>
+        <div style="overflow-x:auto;">
+          <table>
+            <thead><tr><th>Member</th><th>NFC UID</th><th>Date</th><th>Time in</th><th>Time out</th><th>Membership</th><th>Result</th></tr></thead>
+            <tbody id="historyTable"></tbody>
+          </table>
+        </div>
+        <p class="empty" id="historyEmpty">No check-in records match the filters.</p>
+      </div>
+    </section>
+
+    <!-- ---------------- ATTENDANCE ---------------- -->
+    <section class="view" id="view-attendance">
+      <div class="grid cols-3" style="margin-bottom:20px;">
+        <div class="card stat"><div class="num" id="attToday">0</div><div class="label">Checked in today</div></div>
+        <div class="card stat"><div class="num" id="attWeek">0</div><div class="label">This week (Mon–Sun)</div></div>
+        <div class="card stat"><div class="num" id="attMonth">0</div><div class="label">This month</div></div>
+      </div>
+      <div class="card scroll-reveal">
+        <div class="panel-title"><h2>Member attendance history</h2></div>
+        <div class="toolbar">
+          <select id="attMemberSelect" style="flex:1;min-width:200px;"></select>
+        </div>
+        <table>
+          <thead><tr><th>Date</th><th>Time in</th><th>Time out</th><th>Result</th></tr></thead>
+          <tbody id="attHistoryTable"></tbody>
+        </table>
+        <p class="empty" id="attHistoryEmpty">Select a member to see their check-ins.</p>
+      </div>
+    </section>
+
+    <!-- ---------------- REPORTS ---------------- -->
+    <section class="view" id="view-reports">
+      <div class="choice-toggle" id="reportToggle">
+        <button class="active" data-report="attendance">Attendance</button>
+        <button data-report="membership">Membership</button>
+        <button data-report="payments">Payments</button>
+        <button data-report="nfc">NFC check-in</button>
+        <button data-report="inventory">Inventory</button>
+      </div>
+      <div class="card scroll-reveal">
+        <div class="toolbar" id="reportFilters">
+          <input type="date" id="repFrom">
+          <input type="date" id="repTo">
+          <select id="repStatus" style="display:none;min-width:150px;">
+            <option value="all">All statuses</option>
+            <option value="active">Active</option>
+            <option value="soon">Expiring soon</option>
+            <option value="expired">Expired</option>
+            <option value="inactive">Inactive</option>
+          </select>
+          <button class="btn" id="btnGenReport">Generate report</button>
+        </div>
+        <div id="reportOutput"><p class="empty">Pick a report type and click Generate report.</p></div>
+      </div>
+    </section>
+
+    <!-- ---------------- SETTINGS ---------------- -->
+    <section class="view" id="view-settings">
+      <div class="card scroll-reveal" style="max-width:560px;">
+        <div class="panel-title"><h2>Gym settings</h2></div>
+        <div class="field"><label class="field-label">Gym name</label><input type="text" id="setName"></div>
+        <div class="field"><label class="field-label">Address</label><input type="text" id="setAddress"></div>
+        <div class="field"><label class="field-label">Contact number</label><input type="text" id="setPhone"></div>
+        <div class="field"><label class="field-label">Email</label><input type="text" id="setEmail"></div>
+        <div class="field"><label class="field-label">Opening hours</label><input type="text" id="setHours" placeholder="e.g. Mon–Sat 6:00–22:00"></div>
+        <button class="btn" id="btnSaveSettings">Save settings</button>
+      </div>
+    </section>
+
+    <!-- ---------------- ROLES ---------------- -->
+    <section class="view" id="view-roles">
+      <div class="card scroll-reveal">
+        <div class="panel-title"><h2>What each role can access</h2></div>
+        <table>
+          <thead><tr><th>Area</th><th>Member</th><th>Coach</th><th>Staff</th></tr></thead>
+          <tbody>
+            <tr><td>NFC check-in</td><td>Own entry only</td><td>Own entry only</td><td>Full log</td></tr>
+            <tr><td>Coach directory</td><td>Book &amp; view</td><td>Manage own profile</td><td>Manage all profiles</td></tr>
+            <tr><td>Workout plans</td><td>Own plan</td><td>Assign to members</td><td>View all</td></tr>
+            <tr><td>Supplement inventory</td><td>View recommendations</td><td>View &amp; suggest</td><td>Add, remove, restock</td></tr>
+            <tr><td>Payments</td><td>Pay own dues</td><td>View own payouts</td><td>Process &amp; refund</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card scroll-reveal" style="margin-top:20px;">
+        <div class="panel-title"><h2>Staff roles</h2></div>
+        <table>
+          <thead><tr><th>Area</th><th>Admin</th><th>Front Desk Staff</th><th>Coach</th></tr></thead>
+          <tbody>
+            <tr><td>Dashboard &amp; reports</td><td>Full access</td><td>Dashboard</td><td>Dashboard</td></tr>
+            <tr><td>Members management</td><td>Full access (add / edit / delete)</td><td>View, add, edit, check-in</td><td>Assigned members</td></tr>
+            <tr><td>NFC check-in &amp; cards</td><td>Full access</td><td>Check-in &amp; register cards</td><td>Own entry only</td></tr>
+            <tr><td>Payments</td><td>Full access (history, pending, overdue, plans)</td><td>Record &amp; process payments</td><td>—</td></tr>
+            <tr><td>Attendance</td><td>Full access</td><td>Full access</td><td>—</td></tr>
+            <tr><td>Workout plans</td><td>Full access</td><td>View &amp; generate</td><td>Create, edit, assign to members</td></tr>
+            <tr><td>Coaches &amp; supplements</td><td>Full access</td><td>View</td><td>Own profile / suggestions</td></tr>
+            <tr><td>Settings</td><td>Full access</td><td>—</td><td>—</td></tr>
+          </tbody>
+        </table>
+        <p class="stat-sub" style="margin:12px 0 0;">Switch roles from the "Signed in as" dropdown in the sidebar to watch the navigation change in real time.</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Membership status full report modal -->
+    <div class="modal-backdrop" id="membershipModal">
+      <div class="modal" style="max-width:560px;max-height:80vh;overflow-y:auto;">
+        <h3>Membership report</h3>
+        <div id="membershipReportList"></div>
+        <div class="modal-actions">
+          <button class="btn ghost" id="membershipModalClose">Close</button>
+        </div>
+      </div>
+    </div>
+
+<div class="modal-backdrop" id="adminModal">
+  <div class="modal" id="adminModalBox" style="max-width:640px;max-height:85vh;overflow-y:auto;"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------- Shared state ---------------- */
+  const state = {
+    role: "admin",
+    view: "dashboard",
+    checkins: [],
+    payMethod: "Cash",
+    selectedPlan: "monthly"
+  };
+
+  // Chip IDs here are the DECIMAL uid that USB NFC readers type out
+  // (e.g. "3033723652"). Hex inputs like "04:A3:1F:2B" still work too.
+  const members = [
+  ];
+
+  /* ---------------- Persistence (localStorage) ----------------
+     Members, check-ins and inventory are saved in this browser so
+     nothing is lost when the page is refreshed or closed. */
+  function loadJSON(key, fallback){
+    try { return JSON.parse(localStorage.getItem(key)) ?? fallback; }
+    catch(e){ return fallback; }
+  }
+  function saveJSON(key, value){
+    try { localStorage.setItem(key, JSON.stringify(value)); } catch(e){}
+  }
+
+  /* ---- Persistent storage helpers (single source of truth) ---- */
+  function persistMembers(){ saveJSON("iron_members_v2", members); }
+  function saveCheckins(){ saveJSON("iron_checkins_v2", state.checkins); }
+  function saveSupps(){ saveJSON("iron_supp_v2", supplements); }
+  function savePayments(){ saveJSON("iron_payments_v2", gymPayments); }
+  function saveNFC(){ saveJSON("iron_nfc_v2", nfcCards); }
+  function saveCoaches(){ saveJSON("iron_coaches_v2", coaches); }
+  function saveWPlans(){ saveJSON("iron_wplans_v2", customPlans); }
+  function savePlanDefs(){ saveJSON("iron_plans_v2", plans); }
+  function saveSettings(){ saveJSON("iron_settings_v2", gymSettings); }
+
+  /* Local date helpers (defined early so seeding can run before the
+     membership-expiry section declares dateKey/expiryForPlan). */
+  const dk = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  const plusDaysKey = n => dk(new Date(Date.now() + n * 86400000));
+
+  // Restore members (new key first, legacy key as fallback).
+  const legacyMembers = loadJSON("iron_members_legacy", null);
+  let storedMembers = loadJSON("iron_members_v2", null);
+  if (!storedMembers) storedMembers = legacyMembers || null;
+  if (!storedMembers){
+    storedMembers = [];   // brand new — no sample people
+  }
+  storedMembers.forEach(sm => {
+    if (sm && sm.name && !members.some(m => m.name === sm.name && (m.cardUID || "") === (sm.cardUID || ""))) members.push(sm);
+  });
+  members.forEach(m => {
+    if (m.registeredAt === undefined) m.registeredAt = m.startDate || dk(new Date());
+    if (m.startDate === undefined) m.startDate = m.registeredAt;
+  });
+  persistMembers();
+
+  // Restore check-in log (new key first, legacy key as fallback).
+  state.checkins = loadJSON("iron_checkins_v2", loadJSON("iron_checkins_legacy", []));
+  state.checkins.forEach(c => { if (!c.result) c.result = (typeof c.daysLeft === "number" && c.daysLeft <= 0) ? "expired" : "valid"; });
+
+  const coaches = [
+    {name:"Coach Mara", initials:"CM", specialty:"Strength & conditioning", style:"Progressive overload, compound lifts", tags:["Powerlifting","Form correction"], onsite:true},
+    {name:"Coach Diego", initials:"CD", specialty:"HIIT & fat loss", style:"Circuit-based, short rest intervals", tags:["HIIT","Nutrition basics"], onsite:true},
+    {name:"Coach Liza", initials:"CL", specialty:"Mobility & rehab", style:"Low-impact, controlled tempo", tags:["Post-injury","Flexibility"], onsite:true},
+    {name:"Coach Bea", initials:"CB", specialty:"Bodybuilding", style:"Hypertrophy, isolation focus", tags:["Muscle gain","Split routines"], onsite:false},
+    {name:"Coach Ramon", initials:"CR", specialty:"Endurance & conditioning", style:"Tempo runs, interval blocks", tags:["Running","Cardio"], onsite:true},
+    {name:"Coach Iris", initials:"CI", specialty:"Functional training", style:"Movement patterns over machines", tags:["Functional","Core"], onsite:false}
+  ];
+
+  // Restore coaches saved in a previous session; add contact fields.
+  const storedCoaches = loadJSON("iron_coaches_v2", null);
+  if (storedCoaches && storedCoaches.length){ coaches.length = 0; storedCoaches.forEach(c => coaches.push(c)); }
+  coaches.forEach(c => {
+    if (c.phone === undefined) c.phone = "";
+    if (c.email === undefined) c.email = "";
+    if (c.active === undefined) c.active = true;
+  });
+  saveCoaches();
+
+  const workoutLibrary = {
+    loss:{
+      beginner:[["Brisk incline walk","3","12 min",""],["Bodyweight squats","3","15",""],["Standing rows (band)","3","12",""],["Bicycle crunches","3","20",""]],
+      intermediate:[["Kettlebell swings","4","15",""],["Jump rope intervals","5","1 min",""],["Goblet squats","4","12","20 kg"],["Mountain climbers","3","30",""]],
+      advanced:[["Burpee to box jump","5","10",""],["Sled push","6","20 m",""],["Battle ropes","5","30 sec",""],["Weighted step-ups","4","12","15 kg"]]
+    },
+    muscle:{
+      beginner:[["Machine chest press","3","10","25 kg"],["Lat pulldown","3","10","30 kg"],["Leg press","3","12","40 kg"],["Dumbbell curls","3","12","8 kg"]],
+      intermediate:[["Barbell bench press","4","8","45 kg"],["Barbell row","4","8","40 kg"],["Romanian deadlift","4","10","50 kg"],["Overhead press","3","10","25 kg"]],
+      advanced:[["Barbell squat","5","5","80 kg"],["Weighted pull-ups","5","6","10 kg"],["Deadlift","5","5","100 kg"],["Incline dumbbell press","4","8","28 kg"]]
+    },
+    endurance:{
+      beginner:[["Steady jog","1","20 min",""],["Stationary bike","1","15 min",""],["Bodyweight lunges","3","12",""],["Plank hold","3","30 sec",""]],
+      intermediate:[["Tempo run","1","25 min",""],["Rowing machine","4","500 m",""],["Box step-ups","3","15",""],["Farmer's carry","3","40 m","16 kg"]],
+      advanced:[["Interval sprints","8","400 m",""],["Hill repeats","6","1 min",""],["Rowing machine","5","500 m",""],["Weighted carries","4","60 m","24 kg"]]
+    },
+    mobility:{
+      beginner:[["Cat-cow stretch","3","10",""],["Hip flexor stretch","2","30 sec",""],["Band shoulder rotations","3","15",""],["Child's pose","2","45 sec",""]],
+      intermediate:[["World's greatest stretch","3","8 / side",""],["Foam roll IT band","2","1 min",""],["Thoracic rotations","3","12",""],["90/90 hip switches","3","10",""]],
+      advanced:[["Loaded carries (light)","3","40 m","10 kg"],["Deep squat hold","3","1 min",""],["Turkish get-up","3","5 / side","8 kg"],["Ankle mobility drill","3","12",""]]
+    }
+  };
+
+  const supplements = [
+    {name:"Whey Protein", category:"Protein", stock:34, low:15, goal:"muscle"},
+    {name:"Creatine Monohydrate", category:"Performance", stock:9, low:10, goal:"muscle"},
+    {name:"BCAA", category:"Recovery", stock:22, low:12, goal:"endurance"},
+    {name:"Fat Burner Complex", category:"Weight loss", stock:5, low:10, goal:"loss"},
+    {name:"Electrolyte Mix", category:"Hydration", stock:41, low:15, goal:"endurance"},
+    {name:"Multivitamin", category:"General health", stock:18, low:10, goal:"mobility"},
+    {name:"Omega-3 Fish Oil", category:"Recovery", stock:7, low:10, goal:"mobility"},
+    {name:"Mass Gainer", category:"Weight gain", stock:12, low:10, goal:"muscle"}
+  ];
+
+  // Restore inventory saved in a previous session (new key, legacy fallback).
+  loadJSON("iron_supp_v2", loadJSON("iron_supp_legacy", [])).forEach(ss => {
+    if (!ss || !ss.name) return;
+    const s = supplements.find(x => x.name === ss.name);
+    if (!s){ supplements.push(Object.assign({active: true, low: 10, price: "₱500"}, ss)); return; }
+    if (typeof ss.stock === "number") s.stock = ss.stock;
+    if (ss.price !== undefined) s.price = ss.price;
+    if (ss.low !== undefined) s.low = ss.low;
+    if (ss.active !== undefined) s.active = ss.active;
+  });
+  supplements.forEach((s, idx) => {
+    if (s.price === undefined) s.price = "₱" + ((idx + 2) * 150);   // deterministic first-run prices
+    if (s.active === undefined) s.active = true;
+  });
+  saveSupps();
+
+  /* ================= MEMBERSHIP EXPIRY (days left) ================= */
+  function dateKey(d){
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  }
+  // Compute an expiry date from the plan text chosen during registration.
+  function expiryForPlan(planText){
+    const now = new Date();
+    let days = 30;                                   // default: monthly
+    if (/annual/i.test(planText)) days = 365;
+    else if (/quarterly/i.test(planText)) days = 90;
+    else if (/expires in 2 days/i.test(planText)) days = 2;
+    else if (/expired/i.test(planText)) days = -1;   // already expired
+    return dateKey(new Date(now.getFullYear(), now.getMonth(), now.getDate() + days));
+  }
+  function daysLeftOf(member){
+    if (!member.expiresOn) return null;
+    return Math.ceil((new Date(member.expiresOn + "T23:59:59") - Date.now()) / 86400000);
+  }
+  function daysLeftBadge(n){
+    if (n <= 0) return '<span class="pill bad">Expired</span>';
+    if (n <= 3) return '<span class="pill warn">' + n + ' day' + (n === 1 ? '' : 's') + ' left</span>';
+    return '<span class="pill ok">' + n + ' days left</span>';
+  }
+  // Members saved before this feature existed get an expiry based on their plan.
+  members.forEach(m => { if (!m.expiresOn) m.expiresOn = expiryForPlan(m.plan || ""); });
+  persistMembers();
+
+  /* ================= YEARLY VISIT STATISTICS (dashboard charts) =================
+     days:   { "2026-09-23": check-in count }  -> last-7-days bar chart
+     months: [12 counters]                    -> Jan-Dec percentage chart
+     Everything resets automatically when a new year starts. */
+  let gymStats = loadJSON("iron_stats_v2", null);
+  let hadOldYear = false;
+  if (!gymStats){
+    gymStats = { year: new Date().getFullYear(), days: {}, months: Array(12).fill(0) };
+    saveJSON("iron_stats_v2", gymStats);
+  } else if (gymStats.year !== new Date().getFullYear()){
+    hadOldYear = true;         // auto-reset every new year
+    gymStats = { year: new Date().getFullYear(), days: {}, months: Array(12).fill(0) };
+    saveJSON("iron_stats_v2", gymStats);
+  }
+  if (hadOldYear){
+    setTimeout(() => toast("New year detected — visit charts were reset for " + gymStats.year + "."), 1200);
+  }
+  function seedDemoStats(stats){
+    const now = new Date();
+    for (let i = 6; i >= 1; i--){
+      const d = new Date(now); d.setDate(d.getDate() - i);
+      stats.days[dateKey(d)] = 8 + Math.floor(Math.random() * 11);
+    }
+    for (let m = 0; m < now.getMonth(); m++){
+      stats.months[m] = 60 + Math.floor(Math.random() * 41);
+    }
+  }
+
+  /* ---------- Chart 1: Check-ins overview — Monday to Sunday line chart ---------- */
+  const WEEKDAY_NAMES = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+  function startOfWeekMonday(d){
+    const x = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    x.setDate(x.getDate() - ((x.getDay() + 6) % 7));   // roll back to Monday
+    return x;
+  }
+  function currentWeekCounts(){
+    const mon = startOfWeekMonday(new Date());
+    const out = [];
+    for (let i = 0; i < 7; i++){
+      const d = new Date(mon.getFullYear(), mon.getMonth(), mon.getDate() + i);
+      out.push({
+        label: WEEKDAY_NAMES[i],
+        count: gymStats.days[dateKey(d)] || 0,
+        isToday: dateKey(d) === dateKey(new Date())
+      });
+    }
+    return out;
+  }
+  function renderCheckinLineChart(){
+    const wrap = document.getElementById("checkinLineChart");
+    if (!wrap) return;
+    const days = currentWeekCounts();
+    const W = Math.max(320, wrap.clientWidth || 520);
+    const H = 230, padL = 34, padR = 18, padT = 18, padB = 32;
+    const maxV = Math.max(5, ...days.map(x => x.count));
+    const stepX = (W - padL - padR) / 6;
+    const X = i => padL + i * stepX;
+    const Y = v => padT + (1 - v / maxV) * (H - padT - padB);
+    const pts = days.map((x, i) => [X(i), Y(x.count)]);
+    const linePath = pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
+    const areaPath = linePath + " L " + X(6).toFixed(1) + " " + Y(0) + " L " + X(0).toFixed(1) + " " + Y(0) + " Z";
+
+    let grid = "";
+    for (let g = 0; g <= 4; g++){
+      const v = Math.round(maxV / 4 * g);
+      grid += '<line x1="' + padL + '" y1="' + Y(v) + '" x2="' + (W - padR) + '" y2="' + Y(v) + '" stroke="var(--line)" stroke-width="1"/>'
+            + '<text x="' + (padL - 8) + '" y="' + (Y(v) + 3) + '" text-anchor="end" font-size="10" fill="var(--paper-dim)" font-family="IBM Plex Mono,monospace">' + v + '</text>';
+    }
+
+    wrap.innerHTML =
+      '<svg width="100%" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '" style="display:block;">'
+      + grid
+      + '<path d="' + areaPath + '" fill="rgba(232,163,61,.14)"></path>'
+      + '<path d="' + linePath + '" fill="none" stroke="var(--amber)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></path>'
+      + pts.map((p, i) => '<circle class="chart-pt" cx="' + p[0].toFixed(1) + '" cy="' + p[1].toFixed(1) + '" r="' + (days[i].isToday ? 6 : 4.5)
+          + '" fill="' + (days[i].isToday ? "var(--amber)" : "var(--ink)") + '" stroke="var(--amber)" stroke-width="2" style="cursor:pointer;"></circle>').join("")
+      + days.map((x, i) => '<text x="' + X(i).toFixed(1) + '" y="' + (H - 8) + '" text-anchor="middle" font-size="10.5" fill="' + (x.isToday ? "var(--amber)" : "var(--paper-dim)") + '" font-family="Inter,sans-serif" font-weight="' + (x.isToday ? 700 : 400) + '">' + x.label + '</text>').join("")
+      + '<line id="chartCross" x1="0" y1="' + padT + '" x2="0" y2="' + (H - padB) + '" stroke="var(--paper-dim)" stroke-width="1" stroke-dasharray="3 3" opacity="0"></line>'
+      + '</svg>';
+
+    const tip = document.getElementById("checkinChartTip");
+    const svg = wrap.querySelector("svg");
+    const cross = svg.querySelector("#chartCross");
+    // Tooltip stays pinned at the bottom-right INSIDE the chart box —
+    // only its text updates as you hover, it never moves around.
+    // A vertical guide line snaps in front of the hovered day.
+    function showTip(i){
+      const x = days[i];
+      tip.innerHTML = "<strong>" + x.label + "</strong> &middot; " + x.count + " check-in" + (x.count === 1 ? "" : "s") + (x.isToday ? " &middot; today" : "");
+      if (cross){
+        cross.setAttribute("x1", X(i));
+        cross.setAttribute("x2", X(i));
+        cross.setAttribute("opacity", "1");
+      }
+      svg.querySelectorAll(".chart-pt").forEach((c, ci) => {
+        c.setAttribute("r", ci === i ? 6.5 : (days[ci].isToday ? 6 : 4.5));
+      });
+    }
+    svg.addEventListener("mousemove", (e) => {
+      const rect = svg.getBoundingClientRect();
+      const relX = (e.clientX - rect.left) * (W / rect.width);
+      const i = Math.max(0, Math.min(6, Math.round((relX - padL) / stepX)));
+      showTip(i);
+    });
+    svg.addEventListener("mouseleave", () => {
+      if (cross) cross.setAttribute("opacity", "0");
+      svg.querySelectorAll(".chart-pt").forEach((c, ci) => {
+        c.setAttribute("r", days[ci].isToday ? 6 : 4.5);
+      });
+    });
+
+    const range = document.getElementById("weekRangeLabel");
+    if (range){
+      const mon = startOfWeekMonday(new Date());
+      const sun = new Date(mon.getFullYear(), mon.getMonth(), mon.getDate() + 6);
+      range.textContent = "Mon " + mon.getDate() + " – Sun " + sun.getDate() + " " + sun.toLocaleDateString([], {month: "short"});
+    }
+
+    const cmp = document.getElementById("todayVsYesterday");
+    if (cmp){
+      const ti = (new Date().getDay() + 6) % 7;
+      const t = days[ti].count, y = days[(ti + 6) % 7].count;
+      if (t > y)      cmp.innerHTML = '<span class="delta up">▲ Today is higher by ' + (t - y) + '</span>' + (y === 0 ? ' <span style="color:var(--paper-dim)">(no check-ins yesterday)</span>' : '');
+      else if (t < y) cmp.innerHTML = '<span class="delta down">▼ Today is lower by ' + (y - t) + '</span>';
+      else            cmp.innerHTML = '<span style="color:var(--paper-dim)">— Same level as yesterday (' + t + ' check-in' + (t === 1 ? '' : 's') + ')</span>';
+    }
+  }
+
+  /* ---------- Chart 2: Membership status donut + full report ---------- */
+  function memberStatusKey(m){
+    if (m.inactive) return "inactive";
+    const d = daysLeftOf(m);
+    if (d === null) return "active";
+    if (d <= 0) return "expired";
+    if (d <= 3) return "soon";
+    return "active";
+  }
+  const STATUS_META = {
+    active:   { label: "Active",       color: "#4C9A8B" },
+    expired:  { label: "Expired",      color: "#C4604A" },
+    soon:     { label: "Expired soon", color: "#E8A33D" },
+    inactive: { label: "Inactive",     color: "#9AA3AC" }
+  };
+  function membershipCounts(){
+    const c = { active: 0, expired: 0, soon: 0, inactive: 0 };
+    members.forEach(m => c[memberStatusKey(m)]++);
+    return c;
+  }
+  function renderMembershipDonut(){
+    const donut = document.getElementById("membershipDonut");
+    if (!donut) return;
+    const counts = membershipCounts();
+    const total = members.length;
+    const R = 62, C = 2 * Math.PI * R;
+    let offset = 0, segs = "";
+    const gap = total > 1 ? 2 : 0;
+    Object.keys(STATUS_META).forEach(k => {
+      if (!counts[k]) return;
+      const len = Math.max(0, (counts[k] / total) * C - gap);
+      segs += '<circle cx="80" cy="80" r="' + R + '" fill="none" stroke="' + STATUS_META[k].color + '" stroke-width="20"'
+            + ' stroke-dasharray="' + len.toFixed(1) + ' ' + (C - len).toFixed(1) + '" stroke-dashoffset="' + (-offset).toFixed(1)
+            + '" transform="rotate(-90 80 80)"></circle>';
+      offset += (counts[k] / total) * C;
+    });
+    donut.innerHTML = segs
+      + '<text x="80" y="78" text-anchor="middle" font-size="26" font-weight="600" fill="var(--paper)" font-family="Oswald,sans-serif">' + total + '</text>'
+      + '<text x="80" y="96" text-anchor="middle" font-size="9.5" fill="var(--paper-dim)" font-family="Inter,sans-serif" letter-spacing="1">MEMBERS</text>';
+    const legend = document.getElementById("membershipLegend");
+    if (legend){
+      legend.innerHTML = Object.keys(STATUS_META).map(k => {
+        const pct = total ? Math.round(counts[k] / total * 100) : 0;
+        return '<div class="legend-row"><span class="legend-dot" style="background:' + STATUS_META[k].color + '"></span>'
+             + '<span class="legend-label">' + STATUS_META[k].label + '</span>'
+             + '<span class="legend-val mono">' + counts[k] + ' &middot; ' + pct + '%</span></div>';
+      }).join("");
+    }
+    const note = document.getElementById("membershipNote");
+    if (note){
+      const attention = counts.expired + counts.soon;
+      note.textContent = attention
+        ? attention + " member" + (attention === 1 ? "" : "s") + " need" + (attention === 1 ? "s" : "") + " renewal attention."
+        : "All memberships are in good standing.";
+    }
+  }
+
+  /* ---------- Membership full report modal (list, mark inactive, remove) ---------- */
+  function renderMembershipReport(){
+    const wrap = document.getElementById("membershipReportList");
+    if (!wrap) return;
+    wrap.innerHTML = Object.keys(STATUS_META).map(k => {
+      const list = members.filter(m => memberStatusKey(m) === k);
+      const rows = list.length ? list.map(m => {
+        const d = daysLeftOf(m);
+        const badge = d === null ? "" : " " + daysLeftBadge(d);
+        const i = members.indexOf(m);
+        return '<div class="report-row">'
+          + '<div><div class="report-name">' + m.name + '</div>'
+          + '<div class="report-sub">' + (m.plan || "—") + badge + '</div></div>'
+          + '<div class="report-actions">'
+          + '<button class="btn ghost small" data-toggle-inactive="' + i + '">' + (m.inactive ? "Mark active" : "Mark inactive") + '</button>'
+          + '<button class="btn ghost small" data-remove-member="' + i + '" style="color:var(--red);border-color:rgba(196,96,74,.45);">Remove</button>'
+          + '</div></div>';
+      }).join("") : '<div class="empty" style="padding:6px 2px 12px;">No members in this category.</div>';
+      return '<div class="report-section">'
+        + '<div class="report-section-title"><span class="legend-dot" style="background:' + STATUS_META[k].color + '"></span>'
+        + STATUS_META[k].label + ' <span class="mono" style="font-size:11px;">&middot; ' + list.length + '</span></div>'
+        + rows + '</div>';
+    }).join("");
+  }
+  document.getElementById("membershipReportList").addEventListener("click", (e) => {
+    const tg = e.target.closest("[data-toggle-inactive]");
+    const rm = e.target.closest("[data-remove-member]");
+    if (tg){
+      const m = members[Number(tg.dataset.toggleInactive)];
+      if (!m) return;
+      m.inactive = !m.inactive;
+      persistMembers();
+      renderMembershipDonut();
+      renderMembershipReport();
+      toast(m.name + (m.inactive ? " marked inactive." : " marked active."));
+    }
+    if (rm){
+      if (state.role === "member"){ toast("Only staff or coaches can remove members."); return; }
+      const i = Number(rm.dataset.removeMember);
+      const m = members[i];
+      if (!m) return;
+      if (!confirm("Remove " + m.name + " from the member list? This cannot be undone.")) return;
+      members.splice(i, 1);
+      persistMembers();
+      renderMembershipDonut();
+      renderMembershipReport();
+      animateNumber(document.getElementById("statMembers"), members.length, 400);
+      toast(m.name + " removed from members.");
+    }
+  });
+  document.getElementById("btnViewReport").addEventListener("click", () => {
+    renderMembershipReport();
+    document.getElementById("membershipModal").classList.add("open");
+  });
+  document.getElementById("membershipModalClose").addEventListener("click", () => {
+    document.getElementById("membershipModal").classList.remove("open");
+  });
+
+  /* ---------- Registration modal: show computed expiry date ---------- */
+  function updateRegExpiryPreview(){
+    const plan = document.getElementById("regPlan").value;
+    const exp = expiryForPlan(plan);
+    const days = Math.round((new Date(exp + "T00:00:00") - new Date(dateKey(new Date()) + "T00:00:00")) / 86400000);
+    const p = document.getElementById("regExpiryPreview");
+    p.textContent = "Valid until: " + exp + " — " + (days <= 0 ? "already EXPIRED" : days + " day" + (days === 1 ? "" : "s"));
+    p.style.color = days <= 0 ? "var(--red)" : days <= 3 ? "var(--amber)" : "var(--teal)";
+  }
+  document.getElementById("regPlan").addEventListener("change", updateRegExpiryPreview);
+
+  const plans = [
+    {id:"monthly", name:"Monthly", price:"₱1,500", period:"/ month", perks:["Full gym floor access","1 free coach consult","Locker access"]},
+    {id:"quarterly", name:"Quarterly", price:"₱4,000", period:"/ 3 months", perks:["Everything in Monthly","2 free coach sessions","10% off supplements"]},
+    {id:"annual", name:"Annual", price:"₱14,000", period:"/ year", perks:["Everything in Quarterly","Priority coach booking","Free NFC access chip"]}
+  ];
+
+  // Restore membership plans saved in a previous session.
+  const storedPlans = loadJSON("iron_plans_v2", null);
+  if (storedPlans && storedPlans.length){ plans.length = 0; storedPlans.forEach(p => plans.push(p)); }
+
+  /* ---------------- Clock ---------------- */
+  function tickClock(){
+    const now = new Date();
+    document.getElementById("clockTime").textContent = now.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"});
+    document.getElementById("clockDate").textContent = now.toLocaleDateString([], {weekday:"short", month:"short", day:"numeric"});
+  }
+  tickClock();
+  setInterval(tickClock, 15000);
+
+  /* ---------------- Toast ---------------- */
+  let toastTimer;
+  function toast(msg){
+    const el = document.getElementById("toast");
+    el.textContent = msg;
+    el.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(()=>el.classList.remove("show"), 2600);
+  }
+
+  /* ---------------- Count-up animation ---------------- */
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function animateNumber(el, target, duration){
+    if(!el) return;
+    if(reduceMotion){ el.textContent = target; return; }
+    duration = duration || 700;
+    const start = Number(el.textContent) || 0;
+    const startTime = performance.now();
+    function step(now){
+      const p = Math.min(1, (now - startTime) / duration);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(start + (target - start) * eased);
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ---------------- Ripple effect ---------------- */
+  document.addEventListener("click", (e)=>{
+    const target = e.target.closest(".btn, .method, .navbtn, .choice-toggle button");
+    if(!target || target.disabled) return;
+    const rect = target.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height) * 1.8;
+    const ripple = document.createElement("span");
+    ripple.className = "ripple";
+    ripple.style.width = ripple.style.height = size + "px";
+    ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+    ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+    target.appendChild(ripple);
+    ripple.addEventListener("animationend", () => ripple.remove());
+  });
+
+  /* ---------------- 3D tilt for cards ---------------- */
+  function enableTilt(cards){
+    if(reduceMotion) return;
+    cards.forEach(card=>{
+      card.addEventListener("mousemove", (e)=>{
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left, y = e.clientY - rect.top;
+        const rotateX = ((y - rect.height / 2) / (rect.height / 2)) * -5;
+        const rotateY = ((x - rect.width / 2) / (rect.width / 2)) * 5;
+        card.style.transform = `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+      });
+      card.addEventListener("mouseleave", ()=>{ card.style.transform = ""; });
+    });
+  }
+  /* ---------------- Scroll-triggered reveal ---------------- */
+  function initScrollReveal(){
+    const items = document.querySelectorAll(".scroll-reveal");
+    items.forEach((el, i) => {
+      el.style.transitionDelay = (i % 3) * 90 + "ms";
+    });
+    if(reduceMotion){
+      items.forEach(el => el.classList.add("revealed"));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle("revealed", entry.isIntersecting);
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -60px 0px" });
+    items.forEach(el => io.observe(el));
+  }
+
+  /* ---------------- Navigation ---------------- */
+  const viewMeta = {
+    dashboard:{title:"Dashboard", sub:"Today's activity across the floor, coaching, and inventory."},
+    checkin:{title:"NFC check-in", sub:"1st tap = time in, 2nd tap = time out. Two scans per day, resets at 12 AM."},
+    coach:{title:"Coaches", sub:"Choose from the in-house roster, or register a personal coach for a scheduled visit."},
+    workout:{title:"Workout plans", sub:"Generate a recommended routine based on goal and experience level."},
+    supplements:{title:"Supplements", sub:"Goal-based recommendations, plus live inventory monitoring for staff."},
+    payment:{title:"Payments", sub:"Membership plans and accepted payment methods."},
+    roles:{title:"Roles & access", sub:"What members, coaches, and staff can each see and do."},
+    members:{title:"Members", sub:"Add, edit, search, and manage all gym members and their memberships."},
+    nfcmgmt:{title:"NFC cards", sub:"Register, assign, and unassign NFC cards. Works with ACR122U via keyboard-wedge, Web NFC, or the local bridge."},
+    history:{title:"Check-in history", sub:"Every NFC tap: valid entries, expired memberships, inactive members, and unregistered cards."},
+    attendance:{title:"Attendance", sub:"Today, weekly, and monthly check-ins plus per-member attendance history."},
+    reports:{title:"Reports", sub:"Attendance, membership, payment, NFC check-in, and inventory reports with date filters."},
+    settings:{title:"Settings", sub:"Gym profile: name, address, contact details, and opening hours."}
+  };
+
+  function moveNavIndicator(btn){
+    const indicator = document.getElementById("navIndicator");
+    const nav = document.getElementById("railnav");
+    if(!btn || window.innerWidth <= 820){ indicator.style.opacity = "0"; return; }
+    const navRect = nav.getBoundingClientRect();
+    const btnRect = btn.getBoundingClientRect();
+    indicator.style.opacity = "1";
+    indicator.style.transform = `translateY(${btnRect.top - navRect.top}px)`;
+    indicator.style.height = btnRect.height + "px";
+  }
+
+  function setView(view){
+    state.view = view;
+    document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
+    document.getElementById("view-"+view).classList.add("active");
+    document.querySelectorAll(".navbtn").forEach(b=>b.classList.toggle("active", b.dataset.view===view));
+    document.getElementById("viewTitle").textContent = viewMeta[view].title;
+    document.getElementById("viewSub").textContent = viewMeta[view].sub;
+    moveNavIndicator(document.querySelector(`.navbtn[data-view="${view}"]`));
+  }
+
+  document.getElementById("railnav").addEventListener("click", (e)=>{
+    const btn = e.target.closest(".navbtn");
+    if(!btn || btn.disabled) return;
+    setView(btn.dataset.view);
+  });
+
+  /* ---------------- Role switching ---------------- */
+  function applyRolePermissions(){
+    const inventoryCard = document.getElementById("inventoryCard");
+    if(state.role === "member"){
+      inventoryCard.style.display = "none";
+    } else {
+      inventoryCard.style.display = "";
+    }
+    const resetBtn = document.getElementById("btnResetYear");
+    if(resetBtn) resetBtn.style.display = state.role === "member" ? "none" : "";
+    const resetAllBtn = document.getElementById("btnResetAll");
+    if(resetAllBtn) resetAllBtn.style.display = state.role === "admin" ? "" : "none";
+  }
+  const roleSelectEl = document.getElementById("roleSelect");
+  if(roleSelectEl){
+    roleSelectEl.addEventListener("change", (e)=>{
+      state.role = e.target.value;
+      applyRolePermissions();
+      applyNavPermissions();
+      toast("Switched to " + e.target.options[e.target.selectedIndex].text);
+    });
+  }
+
+  /* ---------------- Dashboard ---------------- */
+  function renderDashboardCheckins(){
+    const tbody = document.getElementById("dashCheckinTable");
+    if(!tbody) return;
+    if(state.checkins.length === 0){
+      tbody.innerHTML = '<tr><td colspan="3" class="empty" style="border:none;">No check-ins yet today.</td></tr>';
+      return;
+    }
+    tbody.innerHTML = state.checkins.filter(c => c.result !== "unregistered").slice(0,5).map((c,i)=>
+      `<tr class="${i===0 ? 'flash-in' : ''}"><td>${c.name}</td><td>${c.time}</td><td>NFC</td></tr>`
+    ).join("");
+  }
+
+  function renderLowStock(){
+    const lowItems = supplements.filter(s=>s.stock <= s.low);
+    animateNumber(document.getElementById("statLowStock"), lowItems.length, 400);
+    document.getElementById("statLowStockNote").textContent = lowItems.length
+      ? lowItems.map(i=>i.name).slice(0,2).join(", ") + (lowItems.length>2 ? "…" : "")
+      : "All stocked";
+  }
+
+  /* ---------------- NFC check-in ---------------- */
+  // Pair raw in/out scans into ONE session per member per day:
+  // { name, chip, date, timeIn, timeOut, plan, daysLeft, result }
+  function pairSessions(recs){
+    const sessions = [];
+    const byKey = {};
+    recs.slice().reverse().forEach(c => {          // oldest first, so 1st tap = in, 2nd = out
+      if (c.result === "unregistered"){
+        sessions.push({ name: c.name, chip: c.chip, date: c.date, plan: c.plan, daysLeft: c.daysLeft, result: c.result, timeIn: c.time || "", timeOut: "" });
+        return;
+      }
+      const key = c.name + "|" + (c.date || "");
+      if (!byKey[key]){
+        byKey[key] = { name: c.name, chip: c.chip, date: c.date, plan: c.plan, daysLeft: c.daysLeft, result: c.result,
+                       timeIn: c.io === "out" ? "" : (c.time || ""), timeOut: c.io === "out" ? (c.time || "") : "" };
+        sessions.push(byKey[key]);
+      } else {
+        if (c.io === "out") byKey[key].timeOut = c.time || "";   // keep the latest time out
+        else if (!byKey[key].timeIn) byKey[key].timeIn = c.time || "";
+      }
+    });
+    return sessions.reverse();                     // newest day first again
+  }
+
+  function renderCheckinLog(){
+    const tbody = document.getElementById("checkinLogTable");
+    const empty = document.getElementById("checkinEmpty");
+    const todayKey = dateKey(new Date());
+    const todaysAll = state.checkins.filter(c => (!c.date || c.date === todayKey) && c.result !== "unregistered");
+    const sessions = pairSessions(todaysAll);
+    if(sessions.length === 0){
+      tbody.innerHTML = "";
+      empty.style.display = "block";
+    } else {
+      empty.style.display = "none";
+      tbody.innerHTML = sessions.map((s,i)=>
+        `<tr class="${i===0 ? 'flash-in' : ''}"><td>${s.name}</td><td class="mono">${s.chip}</td><td>${s.timeIn || "—"}</td><td>${s.timeOut ? s.timeOut : '<span class="pill ok">In gym</span>'}</td><td>${s.plan}${typeof s.daysLeft === "number" ? " " + daysLeftBadge(s.daysLeft) : ""}</td></tr>`
+      ).join("");
+    }
+    animateNumber(document.getElementById("statCheckins"), sessions.filter(s => s.timeIn).length, 400);
+    renderDashboardCheckins();
+    renderDashboardExtras();
+    renderAttendance();
+  }
+
+  function normalizeUID(value){
+    let s = String(value || "").trim().toUpperCase();
+    if(!s) return "";
+    // Plain decimal UID from keyboard-wedge readers (e.g. "3033723652").
+    if(/^\d+$/.test(s)){
+      let n = BigInt(s), bytes = [];
+      while(n > 0n){ bytes.unshift(Number(n & 0xFFn)); n >>= 8n; }
+      while(bytes.length < 4) bytes.unshift(0);
+      return bytes.map(b => b.toString(16).padStart(2, "0")).join(":");
+    }
+    // Hex with or without separators (e.g. "04A31F2B" or "04:A3:1F:2B").
+    return s.replace(/[^0-9A-F]/g, "").match(/../g)?.join(":") || "";
+  }
+
+  function findMember(scannedUID) {
+    const rawUID = String(scannedUID || "").trim();
+    const uid = normalizeUID(rawUID);
+    if(!uid) return;
+
+    // If an admin screen armed a capture callback, hand the UID over instead of checking in.
+    if (nfcCaptureCallback){
+      const cb = nfcCaptureCallback;
+      nfcCaptureCallback = null;
+      cb(uid, rawUID);
+      return;
+    }
+
+    console.log("Scanned NFC UID:", rawUID, "->", uid);
+
+    const member = members.find(m => normalizeUID(m.cardUID) === uid);
+    const zone = document.getElementById("nfcZone");
+    const ring = document.querySelector("#nfcZone .nfc-ring");
+
+    // Two scans per member PER DAY: 1st tap = TIME IN, 2nd tap = TIME OUT,
+    // any further tap is blocked until 12:00 AM (next day) — the cycle
+    // resets automatically because we compare against today's date key.
+    const todayKey0 = dateKey(new Date());
+    const todaysRecs = member ? state.checkins.filter(function(c){
+      return c.name === member.name && c.date === todayKey0 && c.result !== "unregistered";
+    }) : [];
+    if(member && todaysRecs.length >= 2){
+      updateNFCStatus("Attendance complete today — " + member.name, true);
+      toast(member.name + " already completed time in & time out today. Next attendance unlocks at 12 AM tomorrow.");
+      return;
+    }
+    const scanType = todaysRecs.length === 1 ? "out" : "in";   // 1st scan = in, 2nd scan = out
+
+    if(!member){
+      const now0 = new Date();
+      state.checkins.unshift({
+        name: "— (unregistered)", chip: rawUID || uid, plan: "—",
+        time: now0.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"}),
+        date: dateKey(now0), daysLeft: null, result: "unregistered"
+      });
+      saveCheckins();
+      renderHistory(); renderDashboardExtras();
+      zone.classList.remove("success");
+      ring.classList.remove("success");
+      updateNFCStatus("Card detected — not registered");
+      openRegModal(uid, rawUID);
+      return;
+    }
+
+    zone.classList.add("success");
+    ring.classList.add("success");
+
+    const now = new Date();
+    const daysLeft = daysLeftOf(member);
+    state.checkins.unshift({
+      name: member.name,
+      chip: rawUID || uid,
+      plan: member.plan,
+      time: now.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"}),
+      date: dateKey(now),
+      daysLeft: daysLeft,
+      io: scanType,
+      result: member.inactive ? "inactive" : (daysLeft !== null && daysLeft <= 0 ? "expired" : "valid")
+    });
+    saveCheckins();
+
+    // Record the visit for the dashboard charts — TIME IN only, so a
+    // member's attendance is counted once per day (time out is logged
+    // but never double-counts the visit).
+    if(scanType === "in"){
+      const todayKey = dateKey(now);
+      gymStats.days[todayKey] = (gymStats.days[todayKey] || 0) + 1;
+      gymStats.months[now.getMonth()] = (gymStats.months[now.getMonth()] || 0) + 1;
+      saveJSON("iron_stats_v2", gymStats);
+    }
+    renderCheckinLineChart();
+    renderMembershipDonut();
+
+    renderCheckinLog();
+    renderHistory();
+    renderLowStock();
+    setView("checkin");
+    showLastCheckin(state.checkins[0]);
+    updateNFCStatus("✓ " + member.name + (scanType === "out" ? " timed out" : " timed in"), true);
+    toast(member.name + (scanType === "out" ? " timed out" : " timed in") + " — " +
+      (daysLeft === null ? member.plan :
+       daysLeft <= 0 ? "⚠ Membership EXPIRED — please renew" :
+       daysLeft + " day" + (daysLeft === 1 ? "" : "s") + " left"));
+
+    if(navigator.vibrate) navigator.vibrate(80);
+
+    setTimeout(() => {
+      zone.classList.remove("success");
+      ring.classList.remove("success");
+      if(nfcReaderMode === "webnfc") updateNFCStatus("Web NFC active — tap a card", true);
+      else if(nfcReaderMode === "keyboard") updateNFCStatus("USB NFC reader ready", true);
+    }, 1800);
+  }
+
+  /* ---------------- NFC CONNECTION ----------------
+     Mode 1: Web NFC on Android Chrome over HTTPS.
+     Mode 2: USB NFC reader in keyboard-wedge mode.
+     Note: an ACR122U does NOT expose its UID directly to normal desktop
+     browser JavaScript. For ACR122U on PC, use a local bridge that sends
+     the UID to this page, or configure the reader as a keyboard-wedge device.
+  ---------------- */
+  const nfcStatus = document.getElementById("nfcStatus");
+  let nfcReaderMode = "none";
+  let nfcReader = null;
+  let lastScanUID = "";
+  let lastScanTime = 0;
+
+  function updateNFCStatus(message, connected = false){
+    if(!nfcStatus) return;
+    nfcStatus.textContent = message;
+    nfcStatus.style.borderColor = connected ? "var(--teal)" : "var(--line)";
+    nfcStatus.style.color = connected ? "var(--teal)" : "var(--paper)";
+  }
+
+  async function startWebNFC(){
+    if(!("NDEFReader" in window)) return false;
+    try{
+      nfcReader = new NDEFReader();
+      await nfcReader.scan();
+      nfcReaderMode = "webnfc";
+      updateNFCStatus("Web NFC active — tap a card", true);
+
+      nfcReader.addEventListener("reading", event => {
+        // Web NFC exposes the physical tag UID as serialNumber.
+        const uid = normalizeUID(event.serialNumber);
+        if(uid) findMember(uid);
+      });
+
+      nfcReader.addEventListener("readingerror", () => {
+        updateNFCStatus("NFC read error — tap the card again");
+      });
+      return true;
+    }catch(error){
+      console.warn("Web NFC unavailable:", error);
+      return false;
+    }
+  }
+
+  function startKeyboardWedge(){
+    nfcReaderMode = "keyboard";
+    updateNFCStatus("USB NFC reader ready — just tap a card", true);
+
+    // Capture the reader's keystrokes at the DOCUMENT level: the reader types
+    // the UID + Enter like a keyboard, no input field or click needed.
+    let buf = "";
+    let flushTimer = null;
+    const FLUSH_MS = 60;
+
+    function flush(){
+      const raw = buf.trim();
+      buf = "";
+      if(raw && normalizeUID(raw)) findMember(raw);
+    }
+
+    document.addEventListener("keydown", (event) => {
+      // If a scan-capture field is armed (NFC management / member form),
+      // route the reader's keystrokes straight into it.
+      if (nfcScanField && document.contains(nfcScanField)){
+        if (event.key === "Enter"){
+          event.preventDefault();
+          const v = nfcScanField.value;
+          nfcScanField.value = v;   // keep exactly what the reader typed
+          nfcScanField.dispatchEvent(new Event("change"));
+          nfcScanField = null;
+          return;
+        }
+        if (event.key === "Backspace"){ event.preventDefault(); nfcScanField.value = nfcScanField.value.slice(0, -1); return; }
+        if (event.key.length === 1){ event.preventDefault(); nfcScanField.value += event.key; return; }
+      }
+      // Don't steal keystrokes while the user is typing in a form field.
+      const t = event.target;
+      if(t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.tagName === "SELECT" || t.isContentEditable)) return;
+
+      if(event.key === "Enter"){
+        if(buf){ event.preventDefault(); flush(); }
+        return;
+      }
+      if(event.key.length === 1){
+        buf += event.key;
+        clearTimeout(flushTimer);
+        flushTimer = setTimeout(flush, FLUSH_MS); // readers without Enter still get flushed
+      }
+    });
+  }
+
+  /* Optional local bridge for desktop readers such as ACR122U.
+     The bridge must run separately and send a plain UID over ws://localhost:8765. */
+  function startLocalBridge(){
+    try{
+      const socket = new WebSocket("ws://localhost:8765");
+      socket.addEventListener("open", () => {
+        nfcReaderMode = "bridge";
+        updateNFCStatus("NFC scanner connected", true);
+      });
+      socket.addEventListener("message", event => {
+        const uid = normalizeUID(event.data);
+        if(uid) findMember(uid);
+      });
+      socket.addEventListener("error", () => {});
+      socket.addEventListener("close", () => {
+        if(nfcReaderMode === "bridge"){
+          nfcReaderMode = "none";
+          updateNFCStatus("NFC bridge disconnected");
+        }
+      });
+      return socket;
+    }catch(error){
+      return null;
+    }
+  }
+
+  (async function initNFC(){
+    // First try the native phone NFC reader.
+    if(await startWebNFC()) return;
+
+    // Then try a USB keyboard-wedge reader.
+    startKeyboardWedge();
+
+    // Also attempt the optional desktop bridge.
+    startLocalBridge();
+  })();
+
+  /* ---------------- Coaches ---------------- */
+  function renderCoaches(){
+    const grid = document.getElementById("coachGrid");
+    grid.innerHTML = coaches.filter(c=>c.onsite && c.active !== false).map(c=>`
+      <div class="card coach-card">
+        <div class="coach-head">
+          <div class="avatar">${c.initials}</div>
+          <div>
+            <div class="coach-name">${c.name}</div>
+            <div class="coach-spec">${c.specialty}</div>
+          </div>
+        </div>
+        <p class="sub" style="margin:0;">${c.style}</p>
+        <div class="tag-row">${c.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+        <div class="coach-actions">
+          <button class="btn small assign-btn" data-coach="${c.name}">Assign as my coach</button>
+          <button class="btn ghost small book-btn" data-coach="${c.name}">Book session</button>
+        </div>
+      </div>
+    `).join("");
+  }
+
+  document.getElementById("coachChoiceToggle").addEventListener("click", (e)=>{
+    const btn = e.target.closest("button");
+    if(!btn) return;
+    document.querySelectorAll("#coachChoiceToggle button").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    const isGym = btn.dataset.choice === "gym";
+    document.getElementById("coachGymPanel").style.display = isGym ? "" : "none";
+    document.getElementById("coachPersonalPanel").style.display = isGym ? "none" : "";
+  });
+
+  document.getElementById("coachGrid").addEventListener("click", (e)=>{
+    const assignBtn = e.target.closest(".assign-btn");
+    const bookBtn = e.target.closest(".book-btn");
+    if(assignBtn){
+      toast(assignBtn.dataset.coach + " is now assigned as your coach.");
+    }
+    if(bookBtn){
+      openApptModal(bookBtn.dataset.coach);
+    }
+  });
+
+  let apptTargetCoach = "";
+  function openApptModal(coachName){
+    apptTargetCoach = coachName;
+    document.getElementById("apptModalTitle").textContent = "Book a session with " + coachName;
+    document.getElementById("apptDatetime").value = "";
+    document.getElementById("apptNote").value = "";
+    document.getElementById("apptModal").classList.add("open");
+  }
+  document.getElementById("apptCancel").addEventListener("click", ()=>{
+    document.getElementById("apptModal").classList.remove("open");
+  });
+  document.getElementById("apptConfirm").addEventListener("click", ()=>{
+    const dt = document.getElementById("apptDatetime").value;
+    if(!dt){ toast("Pick a date and time first."); return; }
+    document.getElementById("apptModal").classList.remove("open");
+    toast("Session with " + apptTargetCoach + " requested for " + new Date(dt).toLocaleString());
+  });
+
+  document.getElementById("btnRequestPersonal").addEventListener("click", ()=>{
+    const name = document.getElementById("pcName").value.trim();
+    const dt = document.getElementById("pcDatetime").value;
+    if(!name || !dt){ toast("Add your coach's name and a visit time."); return; }
+    toast("Appointment requested for " + name + " on " + new Date(dt).toLocaleString() + ". Front desk will confirm floor access.");
+    document.getElementById("pcName").value = "";
+    document.getElementById("pcDatetime").value = "";
+    document.getElementById("pcNote").value = "";
+  });
+
+  /* ---------------- Workout plans ---------------- */
+  document.getElementById("btnGenerate").addEventListener("click", ()=>{
+    const goal = document.getElementById("goalSelect").value;
+    const level = document.getElementById("levelSelect").value;
+    const rows = workoutLibrary[goal][level];
+    const goalLabel = document.getElementById("goalSelect").selectedOptions[0].text;
+    const levelLabel = document.getElementById("levelSelect").selectedOptions[0].text;
+
+    const html = `
+      <div style="margin-top:20px;animation:viewFade .3s ease both;">
+        <h3 style="font-size:14px;margin-bottom:12px;">${goalLabel} — ${levelLabel}</h3>
+        <div class="exercise-row head"><div>Exercise</div><div>Sets</div><div>Reps / Time</div><div>Load</div></div>
+        ${rows.map((r,i)=>`<div class="exercise-row" style="animation-delay:${i*60}ms"><div>${r[0]}</div><div>${r[1]}</div><div>${r[2]}</div><div>${r[3]||"Bodyweight"}</div></div>`).join("")}
+      </div>
+    `;
+    document.getElementById("planOutput").innerHTML = html;
+    toast("Plan generated for " + goalLabel.toLowerCase() + ".");
+  });
+
+  /* ---------------- Supplements ---------------- */
+  function renderSupplementRecs(){
+    const goal = document.getElementById("goalSelect") ? document.getElementById("goalSelect").value : "muscle";
+    const grid = document.getElementById("suppRecommendGrid");
+    const matches = supplements.filter(s=>s.goal===goal);
+    const list = matches.length ? matches : supplements.slice(0,3);
+    grid.innerHTML = list.map(s=>`
+      <div class="card">
+        <div class="coach-name" style="margin-bottom:4px;">${s.name}</div>
+        <div class="coach-spec">${s.category}</div>
+      </div>
+    `).join("");
+  }
+
+  function renderInventory(){
+    const tbody = document.getElementById("inventoryTable");
+    tbody.innerHTML = supplements.map((s,i)=>{
+      const status = s.stock <= s.low ? '<span class="pill bad">Low stock</span>' : '<span class="pill ok">Stocked</span>';
+      return `<tr>
+        <td>${s.name}</td>
+        <td>${s.category}</td>
+        <td class="mono">${s.stock}</td>
+        <td>${status}</td>
+        <td style="text-align:right;white-space:nowrap;">
+          <button class="btn ghost small" data-i="${i}" data-d="-1">−</button>
+          <button class="btn ghost small" data-i="${i}" data-d="1">+</button>
+        </td>
+      </tr>`;
+    }).join("");
+  }
+
+  document.getElementById("inventoryTable").addEventListener("click", (e)=>{
+    const btn = e.target.closest("button[data-i]");
+    if(!btn) return;
+    const i = Number(btn.dataset.i);
+    const d = Number(btn.dataset.d);
+    supplements[i].stock = Math.max(0, supplements[i].stock + d);
+    saveSupps();
+    renderInventory();
+    renderLowStock();
+    const cell = document.querySelector(`#inventoryTable tr:nth-child(${i+1}) td.mono`);
+    if(cell){
+      cell.style.transition = "none";
+      cell.style.transform = "scale(1.25)";
+      cell.style.color = d > 0 ? "var(--teal)" : "var(--red)";
+      requestAnimationFrame(()=>{
+        cell.style.transition = "transform .25s ease, color .4s ease";
+        cell.style.transform = "scale(1)";
+        cell.style.color = "";
+      });
+    }
+  });
+
+  /* ---------------- Payments ---------------- */
+  function renderPlans(){
+    const grid = document.getElementById("planGrid");
+    grid.innerHTML = plans.map(p=>`
+      <div class="card plan-card ${p.id===state.selectedPlan ? 'selected':''}" data-plan="${p.id}">
+        <div class="coach-spec">${p.name}</div>
+        <div class="price">${p.price}<small> ${p.period}</small></div>
+        <ul>${p.perks.map(x=>`<li>${x}</li>`).join("")}</ul>
+        <button class="btn ${p.id===state.selectedPlan ? '' : 'ghost'} small choose-plan-btn" data-plan="${p.id}">${p.id===state.selectedPlan ? 'Selected' : 'Choose plan'}</button>
+      </div>
+    `).join("");
+    enableTilt(grid.querySelectorAll(".plan-card"));
+  }
+  document.getElementById("planGrid").addEventListener("click", (e)=>{
+    const btn = e.target.closest(".choose-plan-btn");
+    if(!btn) return;
+    state.selectedPlan = btn.dataset.plan;
+    renderPlans();
+  });
+
+  document.getElementById("methodGrid").addEventListener("click", (e)=>{
+    const m = e.target.closest(".method");
+    if(!m) return;
+    document.querySelectorAll(".method").forEach(x=>x.classList.remove("active"));
+    m.classList.add("active");
+    state.payMethod = m.dataset.method;
+  });
+
+  document.getElementById("btnPayNow").addEventListener("click", ()=>{
+    const plan = plans.find(p=>p.id===state.selectedPlan);
+    document.getElementById("paySummary").textContent =
+      `Paid ${plan.price} for the ${plan.name} plan via ${state.payMethod}.`;
+    toast("Payment confirmed — " + plan.name + " via " + state.payMethod);
+  });
+
+  /* ---------------- Registration & manual scan ---------------- */
+  let regPendingUID = null, regPendingRaw = null;
+  function openRegModal(uid, raw){
+    regPendingUID = uid;
+    regPendingRaw = raw;
+    document.getElementById("regChipId").textContent = raw || uid;
+    document.getElementById("regName").value = "";
+    document.getElementById("regModal").classList.add("open");
+    updateRegExpiryPreview();
+    setTimeout(()=>document.getElementById("regName").focus(), 60);
+  }
+  document.getElementById("regCancel").addEventListener("click", ()=>{
+    document.getElementById("regModal").classList.remove("open");
+    toast("Check-in cancelled — card not registered.");
+  });
+  document.getElementById("regConfirm").addEventListener("click", ()=>{
+    const name = document.getElementById("regName").value.trim();
+    if(!name){ toast("Enter the member's name first."); return; }
+    const plan = document.getElementById("regPlan").value;
+    const newMember = { name: name, email: "", phone: "", password: "", cardUID: regPendingRaw || regPendingUID, plan: plan.replace(/\s*—.*$/, ""), startDate: dateKey(new Date()), registeredAt: dateKey(new Date()), expiresOn: expiryForPlan(plan) };
+    members.push(newMember);
+    syncCardFromMember(newMember);
+    persistMembers(); saveNFC();
+    renderMembersTable(); renderNFCCards(); renderMembershipDonut(); renderDashboardExtras(); fillMemberSelects();
+    animateNumber(document.getElementById("statMembers"), activeMemberCount(), 400);
+    document.getElementById("regModal").classList.remove("open");
+    toast(name + " registered with chip " + (regPendingRaw || regPendingUID));
+    findMember(regPendingRaw || regPendingUID);
+  });
+
+  /* ---------------- Last check-in banner ---------------- */
+  let lcTimer = null;
+  function showLastCheckin(c){
+    if(!c) return;
+    const card = document.getElementById("lastCheckinCard");
+    card.style.display = "";
+    document.getElementById("lcName").textContent = c.name;
+    document.getElementById("lcChip").textContent = c.chip;
+    const dayRecs = state.checkins.filter(x => x.name === c.name && (x.date || "") === (c.date || "") && x.result !== "unregistered");
+    const inRecs = dayRecs.filter(x => x.io !== "out");          // newest-first; last one = first time in
+    document.getElementById("lcTimeIn").textContent = (inRecs.length ? inRecs[inRecs.length - 1].time : c.time) || "—";
+    const outRec = dayRecs.find(x => x.io === "out");
+    const outEl = document.getElementById("lcTimeOut");
+    if (outRec){ outEl.textContent = outRec.time; outEl.style.color = "var(--amber)"; }
+    else { outEl.textContent = "In gym"; outEl.style.color = "var(--teal)"; }
+    document.getElementById("lcPlan").textContent = c.plan;
+    const dEl = document.getElementById("lcDays");
+    if(typeof c.daysLeft === "number"){
+      if(c.daysLeft <= 0){ dEl.textContent = "EXPIRED"; dEl.style.color = "var(--red)"; }
+      else { dEl.textContent = c.daysLeft + " day" + (c.daysLeft === 1 ? "" : "s"); dEl.style.color = c.daysLeft <= 3 ? "var(--amber)" : "var(--teal)"; }
+    } else {
+      dEl.textContent = "—"; dEl.style.color = "var(--paper-dim)";
+    }
+    card.style.animation = "none";
+    void card.offsetWidth;
+    card.style.animation = "";
+    clearInterval(lcTimer);
+    const started = Date.now();
+    const ago = document.getElementById("lcAgo");
+    function upd(){ ago.textContent = Math.round((Date.now() - started) / 1000) + "s ago"; }
+    upd();
+    lcTimer = setInterval(upd, 1000);
+  }
+
+  /* ---------------- Reset all data ---------------- */
+  document.getElementById("btnResetAll").addEventListener("click", ()=>{
+    if(!confirm("Reset graphs & logs to zero?\n\nThis wipes all check-in logs, visit graphs, and inventory counts saved in this browser.\n\nMember list and membership status will be KEPT.")) return;
+    // NOTE: "iron_members_legacy" is intentionally NOT reset so member status is preserved.
+    ["iron_stats_v2", "iron_checkins_v2", "iron_checkins_legacy", "iron_supp_v2", "iron_supp_legacy", "iron_payments_v2"].forEach(k => localStorage.removeItem(k));
+    // Save a zeroed stats object so the demo-data seeder does NOT run again on reload.
+    saveJSON("iron_stats_v2", { year: new Date().getFullYear(), days: {}, months: Array(12).fill(0) });
+    location.reload();
+  });
+
+
+  /* ======================================================================
+     ADMIN FEATURES — members, NFC cards, history, attendance, payments,
+     reports, supplements/coaches/workout-plan management, settings, roles
+     ====================================================================== */
+
+  /* ---------- Generic admin modal ---------- */
+  const adminModal = document.getElementById("adminModal");
+  const adminModalBox = document.getElementById("adminModalBox");
+  function openAdminModal(html, maxWidth){
+    adminModalBox.innerHTML = html;
+    adminModalBox.style.maxWidth = (maxWidth || 640) + "px";
+    adminModal.classList.add("open");
+  }
+  function closeAdminModal(){ adminModal.classList.remove("open"); }
+  adminModal.addEventListener("click", (e) => { if (e.target === adminModal) closeAdminModal(); });
+
+  /* ---------- Shared state loaded from localStorage ---------- */
+  let nfcScanField = null;      // input currently armed to receive scanner keystrokes
+  let nfcCaptureCallback = null; // Web NFC capture (Android) for admin screens
+
+  let nfcCards = loadJSON("iron_nfc_v2", null);
+  if (!nfcCards){
+    nfcCards = members.filter(m => m.cardUID).map(m => ({ uid: m.cardUID, member: m.name }));
+    saveNFC();
+  }
+
+  let gymPayments = loadJSON("iron_payments_v2", null);
+  if (!gymPayments){
+    gymPayments = [];   // brand new — no sample payments
+    savePayments();
+  }
+
+  let customPlans = loadJSON("iron_wplans_v2", null) || [];
+
+  let gymSettings = loadJSON("iron_settings_v2", null);
+  if (!gymSettings) gymSettings = { gymName: "IRON GYM", address: "", phone: "", email: "", hours: "" };
+
+  const RESULT_META = {
+    valid:        { label: "Valid / successful", cls: "ok"   },
+    expired:      { label: "Expired membership", cls: "bad"  },
+    inactive:     { label: "Inactive member",    cls: "bad"  },
+    unregistered: { label: "Unregistered card",  cls: "warn" }
+  };
+
+  const ROLE_PERMS = {
+    admin: ["dashboard","checkin","coach","workout","supplements","payment","roles","members","nfcmgmt","history","attendance","reports","settings"],
+    staff: ["dashboard","checkin","members","nfcmgmt","history","attendance","payment"],
+    coach: ["dashboard","workout","coach","members"]
+  };
+  function applyNavPermissions(){
+    const perms = ROLE_PERMS[state.role] || ROLE_PERMS.admin;
+    document.querySelectorAll(".navbtn").forEach(b => {
+      b.style.display = perms.includes(b.dataset.view) ? "" : "none";
+    });
+    if (!perms.includes(state.view)) setView(perms[0]);
+  }
+
+  /* ---------- Shared helpers ---------- */
+  function activeMemberCount(){
+    return members.filter(m => memberStatusKey(m) === "active").length;
+  }
+  function fillMemberSelects(){
+    const opts = members.map((m,i) => '<option value="' + i + '">' + m.name + '</option>').join("");
+    [["attMemberSelect", true], ["payMember", false], ["assignMemberSelect", false]].forEach(function(pair){
+      const el = document.getElementById(pair[0]);
+      if (el) el.innerHTML = (pair[1] ? '<option value="">— Select a member —</option>' : "") + opts;
+    });
+  }
+  function syncCardFromMember(m){
+    if (!m || !m.cardUID) return;
+    let card = nfcCards.find(c => normalizeUID(c.uid) === normalizeUID(m.cardUID));
+    if (!card){ card = { uid: m.cardUID, member: m.name }; nfcCards.push(card); }
+    else card.member = m.name;
+  }
+  function nextRef(){
+    return "IG-" + String(Date.now()).slice(-6) + Math.floor(Math.random() * 90 + 10);
+  }
+  function inRange(dateStr, from, to){
+    if (!dateStr) return !(from || to);
+    if (from && dateStr < from) return false;
+    if (to && dateStr > to) return false;
+    return true;
+  }
+
+  /* ======================================================================
+     1) MEMBERS MANAGEMENT
+     ====================================================================== */
+  function renderMembersTable(){
+    const q = (document.getElementById("memberSearch").value || "").toLowerCase().trim();
+    const f = document.getElementById("memberFilter").value;
+    const tbody = document.getElementById("membersTable");
+    const empty = document.getElementById("membersEmpty");
+    let list = members.map(function(m,i){ return {m:m, i:i}; });
+    if (f !== "all") list = list.filter(x => memberStatusKey(x.m) === f);
+    if (q) list = list.filter(x => [x.m.name, x.m.email, x.m.phone, x.m.cardUID].filter(Boolean).join(" ").toLowerCase().includes(q));
+    if (!list.length){ tbody.innerHTML = ""; empty.style.display = "block"; return; }
+    empty.style.display = "none";
+    tbody.innerHTML = list.map(function(x){
+      const m = x.m, i = x.i;
+      const k = memberStatusKey(m);
+      const d = daysLeftOf(m);
+      const pillCls = k === "active" ? "ok" : k === "soon" ? "warn" : "bad";
+      return '<tr>'
+        + '<td><div style="font-weight:600;">' + m.name + '</div><div class="stat-sub">' + (m.email || "") + (m.email && m.phone ? " · " : "") + (m.phone || "") + '</div></td>'
+        + '<td>' + (m.plan || "—") + '</td>'
+        + '<td><span class="pill ' + pillCls + '">' + STATUS_META[k].label + '</span>' + (d !== null ? " " + daysLeftBadge(d) : "") + '</td>'
+        + '<td class="mono">' + (m.expiresOn || "—") + '</td>'
+        + '<td class="mono">' + (m.cardUID || "—") + '</td>'
+        + '<td class="mono">' + (m.registeredAt || "—") + '</td>'
+        + '<td><div class="tbl-actions">'
+        + '<button class="btn ghost small" data-mview="' + i + '">View</button>'
+        + '<button class="btn ghost small" data-medit="' + i + '">Edit</button>'
+        + '<button class="btn ghost small" data-mtoggle="' + i + '">' + (m.inactive ? "Activate" : "Deactivate") + '</button>'
+        + '<button class="btn ghost small" data-mdel="' + i + '" style="color:var(--red);border-color:rgba(196,96,74,.45);">Delete</button>'
+        + '</div></td></tr>';
+    }).join("");
+  }
+
+  function memberFormHTML(m, isNew){
+    const planOpts = plans.map(p => '<option' + (m.plan === p.name ? " selected" : "") + '>' + p.name + '</option>').join("");
+    return '<h3>' + (isNew ? "Add member" : "Edit member") + '</h3>'
+      + '<div class="form-grid">'
+      + '<div class="field"><label class="field-label">Full name *</label><input type="text" id="mfName" value="' + (m.name || "") + '"></div>'
+      + '<div class="field"><label class="field-label">Email</label><input type="email" id="mfEmail" value="' + (m.email || "") + '"></div>'
+      + '<div class="field"><label class="field-label">Phone number</label><input type="tel" id="mfPhone" value="' + (m.phone || "") + '"></div>'
+      + '<div class="field"><label class="field-label">Password</label><input type="text" id="mfPass" value="' + (m.password || "") + '" placeholder="Member login password"></div>'
+      + '<div class="field"><label class="field-label">Membership plan</label><select id="mfPlan">' + planOpts + '</select></div>'
+      + '<div class="field"><label class="field-label">Account status</label><select id="mfInactive"><option value="active"' + (m.inactive ? "" : " selected") + '>Active</option><option value="inactive"' + (m.inactive ? " selected" : "") + '>Inactive</option></select></div>'
+      + '<div class="field"><label class="field-label">Start date</label><input type="date" id="mfStart" value="' + (m.startDate || dateKey(new Date())) + '"></div>'
+      + '<div class="field"><label class="field-label">Expiration date</label><input type="date" id="mfExp" value="' + (m.expiresOn || "") + '"></div>'
+      + '</div>'
+      + '<div class="field"><label class="field-label">NFC UID</label>'
+      + '<div class="toolbar" style="margin-bottom:0;"><input type="text" id="mfUid" value="' + (m.cardUID || "") + '" placeholder="Tap card on reader, or type UID" style="flex:1;"><button class="btn ghost small" id="mfScanBtn" type="button">Scan</button></div>'
+      + '<p class="stat-sub" style="margin:6px 0 0;">Click Scan, then tap the card on the ACR122U reader (keyboard-wedge) — or tap with Web NFC on Android.</p></div>'
+      + '<div class="modal-actions"><button class="btn ghost" id="mfCancel">Cancel</button><button class="btn" id="mfSave">' + (isNew ? "Add member" : "Save changes") + '</button></div>';
+  }
+
+  function openMemberForm(i){
+    const isNew = i === null || i === undefined;
+    const m = isNew ? {} : members[i];
+    openAdminModal(memberFormHTML(m, isNew), 620);
+    document.getElementById("mfCancel").onclick = closeAdminModal;
+    document.getElementById("mfScanBtn").onclick = function(){
+      const inp = document.getElementById("mfUid");
+      inp.value = "";
+      inp.placeholder = "Listening… tap the NFC card now";
+      nfcScanField = inp;
+      nfcCaptureCallback = function(uid){
+        nfcCaptureCallback = null;
+        const t = document.getElementById("mfUid");
+        if (t) t.value = uid;
+        toast("Card captured: " + uid);
+      };
+      toast("Scanning… tap an NFC card.");
+    };
+    document.getElementById("mfSave").onclick = function(){
+      const name = document.getElementById("mfName").value.trim();
+      if (!name){ toast("Full name is required."); return; }
+      const uid = document.getElementById("mfUid").value.trim();   // stored exactly as scanned
+      if (uid){
+        const clash = members.findIndex(function(x, xi){ return xi !== i && x.cardUID && normalizeUID(x.cardUID) === normalizeUID(uid); });
+        if (clash > -1){ toast("This NFC UID is already assigned to " + members[clash].name + "."); return; }
+      }
+      const plan = document.getElementById("mfPlan").value;
+      let exp = document.getElementById("mfExp").value;
+      if (!exp) exp = expiryForPlan(plan);
+      const rec = {
+        name: name,
+        email: document.getElementById("mfEmail").value.trim(),
+        phone: document.getElementById("mfPhone").value.trim(),
+        password: document.getElementById("mfPass").value,
+        plan: plan,
+        startDate: document.getElementById("mfStart").value || dateKey(new Date()),
+        expiresOn: exp,
+        cardUID: uid || "",
+        inactive: document.getElementById("mfInactive").value === "inactive"
+      };
+      if (isNew){
+        rec.registeredAt = dateKey(new Date());
+        members.push(rec);
+        syncCardFromMember(rec);
+        toast(name + " added as a new member.");
+      } else {
+        const old = members[i];
+        if ((old.cardUID || "") !== rec.cardUID){
+          const oldCard = nfcCards.find(function(c){ return normalizeUID(c.uid) === normalizeUID(old.cardUID || "__none__"); });
+          if (oldCard) oldCard.member = null;
+        }
+        members[i] = Object.assign({}, old, rec);
+        syncCardFromMember(members[i]);
+        toast("Member updated.");
+      }
+      persistMembers(); saveNFC();
+      renderMembersTable(); renderMembershipDonut(); renderNFCCards(); renderDashboardExtras(); fillMemberSelects();
+      animateNumber(document.getElementById("statMembers"), activeMemberCount(), 400);
+      closeAdminModal();
+    };
+  }
+
+  function openMemberView(i){
+    const m = members[i]; if (!m) return;
+    const k = memberStatusKey(m);
+    const d = daysLeftOf(m);
+    const visits = state.checkins.filter(c => c.name === m.name && c.result !== "unregistered").length;
+    const pillCls = k === "active" ? "ok" : k === "soon" ? "warn" : "bad";
+    openAdminModal('<h3>Member details</h3><div class="form-grid">'
+      + '<div class="field"><label class="field-label">Full name</label><div style="font-weight:600;">' + m.name + '</div></div>'
+      + '<div class="field"><label class="field-label">Status</label><div><span class="pill ' + pillCls + '">' + STATUS_META[k].label + '</span>' + (d !== null ? " " + daysLeftBadge(d) : "") + '</div></div>'
+      + '<div class="field"><label class="field-label">Email</label><div>' + (m.email || "—") + '</div></div>'
+      + '<div class="field"><label class="field-label">Phone</label><div>' + (m.phone || "—") + '</div></div>'
+      + '<div class="field"><label class="field-label">Membership plan</label><div>' + (m.plan || "—") + '</div></div>'
+      + '<div class="field"><label class="field-label">Start date</label><div class="mono">' + (m.startDate || "—") + '</div></div>'
+      + '<div class="field"><label class="field-label">Expiration date</label><div class="mono">' + (m.expiresOn || "—") + '</div></div>'
+      + '<div class="field"><label class="field-label">Registered on</label><div class="mono">' + (m.registeredAt || "—") + '</div></div>'
+      + '<div class="field"><label class="field-label">NFC UID</label><div class="mono" style="color:var(--amber);">' + (m.cardUID || "—") + '</div></div>'
+      + '<div class="field"><label class="field-label">Assigned workout plan</label><div>' + (m.assignedPlan || "—") + '</div></div>'
+      + '<div class="field"><label class="field-label">Total check-ins</label><div class="mono">' + visits + '</div></div>'
+      + '</div><div class="modal-actions"><button class="btn" id="mvClose">Close</button></div>', 560);
+    document.getElementById("mvClose").onclick = closeAdminModal;
+  }
+
+  document.getElementById("view-members").addEventListener("click", function(e){
+    const v = e.target.closest("[data-mview]"), ed = e.target.closest("[data-medit]"),
+          tg = e.target.closest("[data-mtoggle]"), dl = e.target.closest("[data-mdel]");
+    if (v) openMemberView(Number(v.dataset.mview));
+    if (ed) openMemberForm(Number(ed.dataset.medit));
+    if (tg){
+      const m = members[Number(tg.dataset.mtoggle)];
+      if (!m) return;
+      m.inactive = !m.inactive;
+      persistMembers();
+      renderMembersTable(); renderMembershipDonut(); renderDashboardExtras();
+      toast(m.name + (m.inactive ? " deactivated." : " reactivated."));
+    }
+    if (dl){
+      if (state.role !== "admin"){ toast("Only admins can delete members."); return; }
+      const i = Number(dl.dataset.mdel); const m = members[i];
+      if (!m) return;
+      if (!confirm("Delete " + m.name + "? Their NFC card will be unassigned. This cannot be undone.")) return;
+      const card = nfcCards.find(c => m.cardUID && normalizeUID(c.uid) === normalizeUID(m.cardUID));
+      if (card) card.member = null;
+      members.splice(i, 1);
+      persistMembers(); saveNFC();
+      renderMembersTable(); renderMembershipDonut(); renderNFCCards(); renderDashboardExtras(); fillMemberSelects();
+      animateNumber(document.getElementById("statMembers"), activeMemberCount(), 400);
+      toast(m.name + " deleted.");
+    }
+  });
+  document.getElementById("btnAddMember").addEventListener("click", function(){ openMemberForm(null); });
+  document.getElementById("memberSearch").addEventListener("input", renderMembersTable);
+  document.getElementById("memberFilter").addEventListener("change", renderMembersTable);
+
+  /* ======================================================================
+     2) NFC MANAGEMENT
+     ====================================================================== */
+  function renderNFCCards(){
+    const tbody = document.getElementById("nfcCardsTable");
+    const empty = document.getElementById("nfcCardsEmpty");
+    if (!nfcCards.length){ tbody.innerHTML = ""; empty.style.display = "block"; return; }
+    empty.style.display = "none";
+    tbody.innerHTML = nfcCards.map(function(c, i){
+      const reg = !!c.member;
+      return '<tr>'
+        + '<td class="mono">' + c.uid + '</td>'
+        + '<td>' + (reg ? c.member : "—") + '</td>'
+        + '<td>' + (reg ? '<span class="pill ok">Registered</span>' : '<span class="pill warn">Unregistered</span>') + '</td>'
+        + '<td><div class="tbl-actions">'
+        + '<button class="btn ghost small" data-nassign="' + i + '">' + (reg ? "Change" : "Assign") + '</button>'
+        + (reg
+            ? '<button class="btn ghost small" data-nunassign="' + i + '">Unassign</button>'
+            : '<button class="btn ghost small" data-nremove="' + i + '" style="color:var(--red);border-color:rgba(196,96,74,.45);">Remove</button>')
+        + '</div></td></tr>';
+    }).join("");
+  }
+
+  function handleScannedCard(raw){
+    const uid = normalizeUID(raw);
+    if (!uid){ toast("Could not read that card — try again."); return; }
+    let card = nfcCards.find(c => normalizeUID(c.uid) === uid);
+    if (!card){
+      card = { uid: raw, member: null };   // store the raw string, match by normalized form
+      nfcCards.push(card);
+      saveNFC();
+    }
+    renderNFCCards();
+    const inp = document.getElementById("nfcScanInput");
+    if (inp) inp.value = card.uid;
+    toast(card.member ? ("Card registered to " + card.member + ".") : "Unregistered card detected — assign it to a member below.");
+  }
+
+  function openAssignModal(cardIdx){
+    const card = nfcCards[cardIdx];
+    if (!card) return;
+    const opts = members.map(function(m, i){
+      const owned = m.cardUID && normalizeUID(m.cardUID) === normalizeUID(card.uid);
+      return '<option value="' + i + '"' + (owned ? " selected" : "") + '>' + m.name + (m.cardUID && !owned ? " (currently: " + m.cardUID + ")" : "") + '</option>';
+    }).join("");
+    openAdminModal('<h3>Assign NFC card</h3>'
+      + '<p class="sub" style="margin:0 0 14px;">Card UID: <span class="mono" style="color:var(--amber);">' + card.uid + '</span></p>'
+      + '<div class="field"><label class="field-label">Member</label><select id="nfcAssignMember"><option value="">— Unassigned —</option>' + opts + '</select></div>'
+      + '<p class="stat-sub" style="margin:0 0 12px;">One card can only belong to one member. Assigning to a member who already has a card replaces their old card automatically.</p>'
+      + '<div class="modal-actions"><button class="btn ghost" id="nfcAssignCancel">Cancel</button><button class="btn" id="nfcAssignSave">Save</button></div>', 460);
+    document.getElementById("nfcAssignCancel").onclick = closeAdminModal;
+    document.getElementById("nfcAssignSave").onclick = function(){
+      const v = document.getElementById("nfcAssignMember").value;
+      if (v === ""){
+        const holder = members.find(m => m.cardUID && normalizeUID(m.cardUID) === normalizeUID(card.uid));
+        if (holder) holder.cardUID = "";
+        card.member = null;
+        toast("Card unassigned.");
+      } else {
+        const mi = Number(v);
+        const holder = members.find(function(m, xi){ return xi !== mi && m.cardUID && normalizeUID(m.cardUID) === normalizeUID(card.uid); });
+        if (holder){ toast("This card is already assigned to " + holder.name + "."); return; }
+        const m = members[mi];
+        if (m.cardUID){
+          const old = nfcCards.find(c => normalizeUID(c.uid) === normalizeUID(m.cardUID));
+          if (old) old.member = null;
+        }
+        m.cardUID = card.uid;
+        card.member = m.name;
+        toast("Card assigned to " + m.name + ".");
+      }
+      persistMembers(); saveNFC();
+      renderNFCCards(); renderMembersTable(); renderMembershipDonut();
+      closeAdminModal();
+    };
+  }
+
+  document.getElementById("view-nfcmgmt").addEventListener("click", function(e){
+    const a = e.target.closest("[data-nassign]"), u = e.target.closest("[data-nunassign]"), r = e.target.closest("[data-nremove]");
+    if (a) openAssignModal(Number(a.dataset.nassign));
+    if (u){
+      const card = nfcCards[Number(u.dataset.nunassign)];
+      if (!card) return;
+      const holder = members.find(m => m.cardUID && normalizeUID(m.cardUID) === normalizeUID(card.uid));
+      if (holder) holder.cardUID = "";
+      card.member = null;
+      persistMembers(); saveNFC();
+      renderNFCCards(); renderMembersTable(); renderMembershipDonut();
+      toast("Card unassigned.");
+    }
+    if (r){
+      const i = Number(r.dataset.nremove);
+      if (confirm("Remove this unregistered card from the list?")){ nfcCards.splice(i, 1); saveNFC(); renderNFCCards(); }
+    }
+  });
+  document.getElementById("btnNFCScan").addEventListener("click", function(){
+    const inp = document.getElementById("nfcScanInput");
+    inp.value = "";
+    inp.placeholder = "Listening… tap the card on the ACR122U reader now";
+    nfcScanField = inp;
+    nfcCaptureCallback = function(uid){
+      nfcCaptureCallback = null;
+      handleScannedCard(uid);
+    };
+    toast("Scanning… tap an NFC card.");
+  });
+  document.getElementById("nfcScanInput").addEventListener("change", function(){
+    if (this.value.trim()) handleScannedCard(this.value);
+  });
+  document.getElementById("btnNFCAddManual").addEventListener("click", function(){
+    const inp = document.getElementById("nfcScanInput");
+    if (inp.value.trim()) handleScannedCard(inp.value);
+    else toast("Type or scan a UID first.");
+  });
+
+  /* ======================================================================
+     3) NFC CHECK-IN HISTORY
+     ====================================================================== */
+  function renderHistory(){
+    const q = (document.getElementById("histSearch").value || "").toLowerCase().trim();
+    const r = document.getElementById("histResult").value;
+    const from = document.getElementById("histFrom").value;
+    const to = document.getElementById("histTo").value;
+    const tbody = document.getElementById("historyTable");
+    const empty = document.getElementById("historyEmpty");
+    let list = state.checkins.slice();
+    if (r !== "all") list = list.filter(c => (c.result || "valid") === r);
+    if (from) list = list.filter(c => (c.date || "") >= from);
+    if (to) list = list.filter(c => (c.date || "") <= to);
+    if (q) list = list.filter(c => ((c.name || "") + " " + (c.chip || "")).toLowerCase().includes(q));
+    const sessions = pairSessions(list);
+    if (!sessions.length){ tbody.innerHTML = ""; empty.style.display = "block"; return; }
+    empty.style.display = "none";
+    tbody.innerHTML = sessions.slice(0, 300).map(function(s){
+      const meta = RESULT_META[s.result || "valid"];
+      const d = typeof s.daysLeft === "number" ? daysLeftBadge(s.daysLeft) : '<span class="pill warn">Unknown</span>';
+      return '<tr><td>' + s.name + '</td><td class="mono">' + s.chip + '</td><td class="mono">' + (s.date || "—") + '</td><td>' + (s.timeIn || "—") + '</td><td>' + (s.timeOut || "—") + '</td><td>' + d + '</td><td><span class="pill ' + meta.cls + '">' + meta.label + '</span></td></tr>';
+    }).join("");
+  }
+  document.getElementById("histSearch").addEventListener("input", renderHistory);
+  ["histResult","histFrom","histTo"].forEach(function(id){ document.getElementById(id).addEventListener("change", renderHistory); });
+
+  /* ======================================================================
+     4) ATTENDANCE
+     ====================================================================== */
+  function renderAttendance(){
+    const now = new Date();
+    const todayKey = dateKey(now);
+    const todays = state.checkins.filter(c => c.date === todayKey && c.result !== "unregistered" && c.io !== "out").length;
+    document.getElementById("attToday").textContent = todays;
+    document.getElementById("attWeek").textContent = currentWeekCounts().reduce(function(a,x){ return a + x.count; }, 0);
+    document.getElementById("attMonth").textContent = gymStats.months[now.getMonth()] || 0;
+    const sel = document.getElementById("attMemberSelect");
+    const m = sel.value === "" ? null : members[Number(sel.value)];
+    const tbody = document.getElementById("attHistoryTable");
+    const empty = document.getElementById("attHistoryEmpty");
+    if (!m){ tbody.innerHTML = ""; empty.style.display = "block"; empty.textContent = "Select a member to see their check-ins."; return; }
+    const recs = pairSessions(state.checkins.filter(c => c.name === m.name && c.result !== "unregistered"));
+    if (!recs.length){ tbody.innerHTML = ""; empty.style.display = "block"; empty.textContent = m.name + " has no check-ins recorded."; return; }
+    empty.style.display = "none";
+    tbody.innerHTML = recs.map(function(s){
+      const meta = RESULT_META[s.result || "valid"];
+      return '<tr><td class="mono">' + s.date + '</td><td>' + (s.timeIn || "—") + '</td><td>' + (s.timeOut || "—") + '</td><td><span class="pill ' + meta.cls + '">' + meta.label + '</span></td></tr>';
+    }).join("");
+  }
+  document.getElementById("attMemberSelect").addEventListener("change", renderAttendance);
+
+  /* ======================================================================
+     5) PAYMENTS (history / record / pending & overdue / plan management)
+     ====================================================================== */
+  function renderPaymentHistory(){
+    const st = document.getElementById("payHistStatus").value;
+    const me = document.getElementById("payHistMethod").value;
+    const from = document.getElementById("payHistFrom").value;
+    const to = document.getElementById("payHistTo").value;
+    let list = gymPayments.slice();
+    if (st !== "all") list = list.filter(p => p.status === st);
+    if (me !== "all") list = list.filter(p => p.method === me);
+    list = list.filter(p => inRange(p.date, from, to));
+    const tbody = document.getElementById("payHistoryTable");
+    const empty = document.getElementById("payHistoryEmpty");
+    if (!list.length){ tbody.innerHTML = ""; empty.style.display = "block"; return; }
+    empty.style.display = "none";
+    tbody.innerHTML = list.map(function(p){
+      return '<tr>'
+      + '<td class="mono">' + p.date + '</td><td>' + p.member + '</td><td>' + p.plan + '</td><td>' + (p.kind || "New") + '</td>'
+      + '<td class="mono">' + p.amount + '</td><td>' + p.method + '</td>'
+      + '<td><span class="pill ' + (p.status === "Paid" ? "ok" : "warn") + '">' + p.status + '</span></td>'
+      + '<td class="mono">' + (p.ref || "—") + '</td></tr>';
+    }).join("");
+  }
+  ["payHistStatus","payHistMethod","payHistFrom","payHistTo"].forEach(function(id){ document.getElementById(id).addEventListener("change", renderPaymentHistory); });
+
+  function renderPendingPayments(){
+    const pend = gymPayments.filter(p => p.status === "Pending");
+    document.getElementById("pendingPaymentsList").innerHTML = pend.length
+      ? pend.map(function(p){
+          const i = gymPayments.indexOf(p);
+          return '<div class="report-row"><div><div class="report-name">' + p.member + '</div><div class="report-sub">' + p.plan + ' · ' + p.amount + ' · ' + p.method + ' · ' + (p.ref || "") + ' · ' + p.date + '</div></div>'
+            + '<div class="tbl-actions"><button class="btn small" data-ppay="' + i + '">Mark paid</button></div></div>';
+        }).join("")
+      : '<p class="empty">No pending payments.</p>';
+    const renewals = members.map(function(m,i){ return {m:m, i:i, d:daysLeftOf(m)}; }).filter(x => !x.m.inactive && x.d !== null && x.d <= 3);
+    document.getElementById("overdueRenewalsList").innerHTML = renewals.length
+      ? renewals.map(x => '<div class="report-row"><div><div class="report-name">' + x.m.name + '</div><div class="report-sub">' + (x.m.plan || "") + ' · expires ' + (x.m.expiresOn || "") + '</div></div>'
+          + '<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">' + daysLeftBadge(x.d) + '<button class="btn small" data-prenew="' + x.i + '">Record renewal</button></div></div>').join("")
+      : '<p class="empty">No memberships overdue or expiring within 3 days.</p>';
+  }
+
+  function openRecordPayment(prefillMemberIdx, kind){
+    if (!members.length){ toast("Add a member first."); return; }
+    const mOpts = members.map(function(m,i){ return '<option value="' + i + '"' + (i === prefillMemberIdx ? " selected" : "") + '>' + m.name + '</option>'; }).join("");
+    const pOpts = plans.map(p => '<option value="' + p.id + '" data-price="' + p.price + '">' + p.name + ' — ' + p.price + ' ' + p.period + '</option>').join("");
+    openAdminModal('<h3>Record payment</h3>'
+      + '<div class="form-grid">'
+      + '<div class="field"><label class="field-label">Member</label><select id="rpMember">' + mOpts + '</select></div>'
+      + '<div class="field"><label class="field-label">Membership plan</label><select id="rpPlan">' + pOpts + '</select></div>'
+      + '<div class="field"><label class="field-label">Amount</label><input type="text" id="rpAmount"></div>'
+      + '<div class="field"><label class="field-label">Payment date</label><input type="date" id="rpDate" value="' + dateKey(new Date()) + '"></div>'
+      + '<div class="field"><label class="field-label">Method</label><select id="rpMethod"><option>Cash</option><option>GCash</option><option>Other</option></select></div>'
+      + '<div class="field"><label class="field-label">Status</label><select id="rpStatus"><option>Paid</option><option>Pending</option></select></div>'
+      + '</div>'
+      + '<div class="field"><label class="field-label">Type</label><select id="rpKind"><option>New</option><option' + (kind === "Renewal" ? " selected" : "") + '>Renewal</option></select></div>'
+      + '<div class="field"><label class="field-label">Reference / receipt no.</label><input type="text" id="rpRef" value="' + nextRef() + '"></div>'
+      + '<div class="modal-actions"><button class="btn ghost" id="rpCancel">Cancel</button><button class="btn" id="rpSave">Save payment</button></div>', 560);
+    const planSel = document.getElementById("rpPlan");
+    const setAmt = function(){ document.getElementById("rpAmount").value = planSel.selectedOptions[0].dataset.price; };
+    planSel.onchange = setAmt; setAmt();
+    document.getElementById("rpCancel").onclick = closeAdminModal;
+    document.getElementById("rpSave").onclick = function(){
+      const mi = Number(document.getElementById("rpMember").value);
+      const m = members[mi];
+      if (!m){ toast("Pick a member."); return; }
+      const planObj = plans.find(p => p.id === planSel.value) || plans[0];
+      const status = document.getElementById("rpStatus").value;
+      const rKind = document.getElementById("rpKind").value;
+      gymPayments.unshift({
+        id: Date.now(), member: m.name, plan: planObj.name,
+        amount: document.getElementById("rpAmount").value.trim(),
+        method: document.getElementById("rpMethod").value,
+        status: status, kind: rKind,
+        ref: document.getElementById("rpRef").value.trim() || nextRef(),
+        date: document.getElementById("rpDate").value || dateKey(new Date()),
+        time: new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})
+      });
+      // A paid renewal extends the membership from today.
+      if (rKind === "Renewal" && status === "Paid"){
+        m.plan = planObj.name;
+        m.startDate = dateKey(new Date());
+        m.expiresOn = expiryForPlan(planObj.name);
+        if (m.inactive) m.inactive = false;
+        persistMembers();
+        renderMembersTable(); renderMembershipDonut();
+        toast(m.name + "'s membership renewed until " + m.expiresOn + ".");
+      }
+      savePayments();
+      renderPaymentHistory(); renderPendingPayments(); renderDashboardExtras();
+      closeAdminModal();
+      toast("Payment recorded for " + m.name + ".");
+    };
+  }
+
+  document.getElementById("paymentToggle").addEventListener("click", function(e){
+    const b = e.target.closest("button"); if (!b) return;
+    document.querySelectorAll("#paymentToggle button").forEach(x => x.classList.remove("active"));
+    b.classList.add("active");
+    ["paymain","history","pending","planmgmt"].forEach(k => {
+      const el = document.getElementById("payPanel-" + k);
+      if (el) el.style.display = k === b.dataset.ppanel ? "" : "none";
+    });
+  });
+  document.getElementById("btnRecordPayment").addEventListener("click", function(){ openRecordPayment(null, null); });
+  document.getElementById("view-payment").addEventListener("click", function(e){
+    const pp = e.target.closest("[data-ppay]"), pr = e.target.closest("[data-prenew]");
+    if (pp){
+      gymPayments[Number(pp.dataset.ppay)].status = "Paid";
+      savePayments(); renderPaymentHistory(); renderPendingPayments(); renderDashboardExtras();
+      toast("Payment marked as paid.");
+    }
+    if (pr) openRecordPayment(Number(pr.dataset.prenew), "Renewal");
+  });
+
+  /* ----- Plan management (prices / durations / add) ----- */
+  function renderPlanMgmt(){
+    document.getElementById("planMgmtTable").innerHTML = plans.map(function(p, i){
+      return '<tr><td style="font-weight:600;">' + p.name + '</td><td class="mono">' + p.price + '</td><td>' + p.period + '</td>'
+      + '<td style="text-align:right;"><button class="btn ghost small" data-planedit="' + i + '">Edit</button></td></tr>';
+    }).join("");
+  }
+  function openPlanForm(i){
+    const isNew = i === null;
+    const p = isNew ? {name:"", price:"₱", period:"/ month", perks:[]} : plans[i];
+    openAdminModal('<h3>' + (isNew ? "Add plan" : "Edit plan") + '</h3>'
+      + '<div class="form-grid">'
+      + '<div class="field"><label class="field-label">Plan name *</label><input type="text" id="pfName" value="' + p.name + '"' + (isNew ? "" : " disabled") + '></div>'
+      + '<div class="field"><label class="field-label">Price *</label><input type="text" id="pfPrice" value="' + p.price + '"></div>'
+      + '</div>'
+      + '<div class="field"><label class="field-label">Duration label</label><input type="text" id="pfPeriod" value="' + p.period + '"></div>'
+      + '<div class="field"><label class="field-label">Perks (one per line)</label><textarea id="pfPerks" rows="4">' + (p.perks || []).join("\n") + '</textarea></div>'
+      + '<div class="modal-actions"><button class="btn ghost" id="pfCancel">Cancel</button><button class="btn" id="pfSave">Save plan</button></div>', 520);
+    document.getElementById("pfCancel").onclick = closeAdminModal;
+    document.getElementById("pfSave").onclick = function(){
+      const name = document.getElementById("pfName").value.trim();
+      const price = document.getElementById("pfPrice").value.trim();
+      if (!name || !price){ toast("Plan name and price are required."); return; }
+      const perks = document.getElementById("pfPerks").value.split("\n").map(s => s.trim()).filter(Boolean);
+      if (isNew){
+        if (plans.some(p2 => p2.name.toLowerCase() === name.toLowerCase())){ toast("A plan with that name already exists."); return; }
+        plans.push({ id: name.toLowerCase().replace(/\s+/g, "-"), name: name, price: price, period: document.getElementById("pfPeriod").value.trim() || "/ month", perks: perks });
+      } else {
+        plans[i].price = price;
+        plans[i].period = document.getElementById("pfPeriod").value.trim() || plans[i].period;
+        plans[i].perks = perks;
+      }
+      savePlanDefs();
+      renderPlans(); renderPlanMgmt();
+      closeAdminModal();
+      toast("Plan saved.");
+    };
+  }
+  document.getElementById("btnAddPlan").addEventListener("click", function(){ openPlanForm(null); });
+  document.getElementById("view-payment").addEventListener("click", function(e){
+    const b = e.target.closest("[data-planedit]");
+    if (b) openPlanForm(Number(b.dataset.planedit));
+  });
+
+  /* ======================================================================
+     6) DASHBOARD — dynamic panels
+     ====================================================================== */
+  function renderDashboardExtras(){
+    let order = 0;
+    const acts = [];
+    state.checkins.slice(0, 8).forEach(function(c){
+      acts.push({ d: c.date || "", o: order++,
+        html: '<div class="report-row"><div><div class="report-name">' + c.name + '</div><div class="report-sub">Check-in · ' + (c.date || "") + ' ' + (c.time || "") + '</div></div><span class="pill ' + RESULT_META[c.result || "valid"].cls + '">' + RESULT_META[c.result || "valid"].label + '</span></div>' });
+    });
+    gymPayments.slice(0, 5).forEach(function(p){
+      acts.push({ d: p.date || "", o: order++,
+        html: '<div class="report-row"><div><div class="report-name">' + p.member + '</div><div class="report-sub">Payment · ' + p.plan + ' · ' + p.amount + ' · ' + p.method + '</div></div><span class="pill ' + (p.status === "Paid" ? "ok" : "warn") + '">' + p.status + '</span></div>' });
+    });
+    acts.sort(function(a,b){ return a.d < b.d ? 1 : a.d > b.d ? -1 : b.o - a.o; });
+    document.getElementById("dashRecentActivity").innerHTML = acts.length
+      ? acts.slice(0, 8).map(a => a.html).join("")
+      : '<p class="empty">No activity yet.</p>';
+    const soon = members.map(m => ({m:m, d:daysLeftOf(m)}))
+      .filter(x => x.d !== null && x.d <= 7 && !x.m.inactive)
+      .sort(function(a,b){ return a.d - b.d; });
+    document.getElementById("dashExpiring").innerHTML = soon.length
+      ? soon.map(x => '<div class="report-row"><div><div class="report-name">' + x.m.name + '</div><div class="report-sub">' + (x.m.plan || "") + '</div></div>' + daysLeftBadge(x.d) + '</div>').join("")
+      : '<p class="empty">No memberships expiring in the next 7 days.</p>';
+    document.getElementById("dashRecentPayments").innerHTML = gymPayments.length
+      ? gymPayments.slice(0, 5).map(p => '<div class="report-row"><div><div class="report-name">' + p.member + '</div><div class="report-sub">' + p.plan + ' · ' + p.amount + ' · ' + p.method + ' · ' + (p.ref || "") + '</div></div><span class="pill ' + (p.status === "Paid" ? "ok" : "warn") + '">' + p.status + '</span></div>').join("")
+      : '<p class="empty">No payments recorded yet.</p>';
+  }
+
+  /* ======================================================================
+     7) REPORTS
+     ====================================================================== */
+  let currentReport = "attendance";
+  function generateReport(){
+    const from = document.getElementById("repFrom").value;
+    const to = document.getElementById("repTo").value;
+    const out = document.getElementById("reportOutput");
+    let html = "";
+    if (currentReport === "attendance"){
+      const recs = state.checkins.filter(c => c.result !== "unregistered" && c.io !== "out" && inRange(c.date || "", from, to));
+      const unique = new Set(recs.map(c => c.name)).size;
+      html = '<p class="stat-sub" style="margin:0 0 10px;">' + recs.length + ' check-in' + (recs.length === 1 ? "" : "s") + ' · ' + unique + ' unique member' + (unique === 1 ? "" : "s") + '</p>'
+        + '<div style="overflow-x:auto;"><table><thead><tr><th>Member</th><th>Date</th><th>Time</th><th>Result</th></tr></thead><tbody>'
+        + recs.map(c => '<tr><td>' + c.name + '</td><td class="mono">' + c.date + '</td><td>' + (c.time || "") + '</td><td><span class="pill ' + RESULT_META[c.result || "valid"].cls + '">' + RESULT_META[c.result || "valid"].label + '</span></td></tr>').join("")
+        + '</tbody></table></div>';
+      if (!recs.length) html = '<p class="empty">No attendance records in this date range.</p>';
+    } else if (currentReport === "membership"){
+      const f = document.getElementById("repStatus").value;
+      let list = members.slice();
+      if (f !== "all") list = list.filter(m => memberStatusKey(m) === f);
+      const c = membershipCounts();
+      html = '<p class="stat-sub" style="margin:0 0 10px;">Active ' + c.active + ' · Expiring soon ' + c.soon + ' · Expired ' + c.expired + ' · Inactive ' + c.inactive + '</p>'
+        + '<div style="overflow-x:auto;"><table><thead><tr><th>Member</th><th>Plan</th><th>Status</th><th>Expires</th><th>NFC UID</th><th>Contact</th></tr></thead><tbody>'
+        + list.map(m => '<tr><td>' + m.name + '</td><td>' + (m.plan || "—") + '</td><td>' + STATUS_META[memberStatusKey(m)].label + '</td><td class="mono">' + (m.expiresOn || "—") + '</td><td class="mono">' + (m.cardUID || "—") + '</td><td class="stat-sub">' + (m.email || "") + ((m.email && m.phone) ? "<br>" : "") + (m.phone || "") + '</td></tr>').join("")
+        + '</tbody></table></div>';
+    } else if (currentReport === "payments"){
+      const recs = gymPayments.filter(p => inRange(p.date, from, to));
+      const sum = recs.filter(p => p.status === "Paid").reduce(function(a,p){ return a + (parseFloat(String(p.amount).replace(/[^\d.]/g, "")) || 0); }, 0);
+      html = '<p class="stat-sub" style="margin:0 0 10px;">' + recs.length + ' payment' + (recs.length === 1 ? "" : "s") + ' · Paid total ≈ ₱' + sum.toLocaleString() + '</p>'
+        + '<div style="overflow-x:auto;"><table><thead><tr><th>Date</th><th>Member</th><th>Plan</th><th>Type</th><th>Amount</th><th>Method</th><th>Status</th><th>Ref</th></tr></thead><tbody>'
+        + recs.map(p => '<tr><td class="mono">' + p.date + '</td><td>' + p.member + '</td><td>' + p.plan + '</td><td>' + (p.kind || "New") + '</td><td class="mono">' + p.amount + '</td><td>' + p.method + '</td><td><span class="pill ' + (p.status === "Paid" ? "ok" : "warn") + '">' + p.status + '</span></td><td class="mono">' + (p.ref || "—") + '</td></tr>').join("")
+        + '</tbody></table></div>';
+      if (!recs.length) html = '<p class="empty">No payments in this date range.</p>';
+    } else if (currentReport === "nfc"){
+      const recs = state.checkins.filter(c => inRange(c.date || "", from, to));
+      const counts = { valid: 0, expired: 0, inactive: 0, unregistered: 0 };
+      recs.forEach(c => counts[c.result || "valid"]++);
+      html = '<p class="stat-sub" style="margin:0 0 10px;">Valid ' + counts.valid + ' · Expired membership ' + counts.expired + ' · Inactive member ' + counts.inactive + ' · Unregistered card ' + counts.unregistered + '</p>'
+        + '<div style="overflow-x:auto;"><table><thead><tr><th>Member</th><th>NFC UID</th><th>Date</th><th>Time</th><th>Result</th></tr></thead><tbody>'
+        + recs.map(c => '<tr><td>' + c.name + '</td><td class="mono">' + c.chip + '</td><td class="mono">' + (c.date || "—") + '</td><td>' + (c.time || "") + '</td><td><span class="pill ' + RESULT_META[c.result || "valid"].cls + '">' + RESULT_META[c.result || "valid"].label + '</span></td></tr>').join("")
+        + '</tbody></table></div>';
+    } else {
+      const low = supplements.filter(s => s.active !== false && s.stock <= s.low).length;
+      html = '<p class="stat-sub" style="margin:0 0 10px;">' + supplements.length + ' products · ' + low + ' below low-stock threshold</p>'
+        + '<div style="overflow-x:auto;"><table><thead><tr><th>Supplement</th><th>Category</th><th>Price</th><th>In stock</th><th>Low threshold</th><th>Status</th></tr></thead><tbody>'
+        + supplements.map(s => '<tr><td>' + s.name + '</td><td>' + s.category + '</td><td class="mono">' + (s.price || "—") + '</td><td class="mono">' + s.stock + '</td><td class="mono">' + s.low + '</td><td>' + (s.active === false ? '<span class="pill warn">Inactive</span>' : s.stock <= s.low ? '<span class="pill bad">Low stock</span>' : '<span class="pill ok">Stocked</span>') + '</td></tr>').join("")
+        + '</tbody></table></div>';
+    }
+    out.innerHTML = html;
+  }
+  document.getElementById("reportToggle").addEventListener("click", function(e){
+    const b = e.target.closest("button"); if (!b) return;
+    document.querySelectorAll("#reportToggle button").forEach(x => x.classList.remove("active"));
+    b.classList.add("active");
+    currentReport = b.dataset.report;
+    document.getElementById("repStatus").style.display = currentReport === "membership" ? "" : "none";
+    generateReport();
+  });
+  document.getElementById("btnGenReport").addEventListener("click", generateReport);
+
+  /* ======================================================================
+     8) SUPPLEMENT / INVENTORY MANAGEMENT
+     ====================================================================== */
+  function renderSuppMgmt(){
+    document.getElementById("suppMgmtTable").innerHTML = supplements.map(function(s, i){
+      return '<tr>'
+      + '<td style="font-weight:600;">' + s.name + (s.active === false ? ' <span class="pill warn">Inactive</span>' : "") + '</td>'
+      + '<td>' + s.category + '</td>'
+      + '<td class="mono">' + (s.price || "—") + '</td>'
+      + '<td class="mono">' + s.stock + '</td>'
+      + '<td class="mono">' + s.low + '</td>'
+      + '<td>' + (s.stock <= s.low ? '<span class="pill bad">Low stock</span>' : '<span class="pill ok">Stocked</span>') + '</td>'
+      + '<td><div class="tbl-actions"><button class="btn ghost small" data-sedit="' + i + '">Edit</button>'
+      + '<button class="btn ghost small" data-stoggle="' + i + '">' + (s.active === false ? "Activate" : "Deactivate") + '</button></div></td></tr>';
+    }).join("");
+  }
+  function openSuppForm(i){
+    const isNew = i === null;
+    const s = isNew ? {name:"", category:"", price:"₱", stock:0, low:10, goal:"muscle"} : supplements[i];
+    openAdminModal('<h3>' + (isNew ? "Add supplement" : "Edit supplement") + '</h3>'
+      + '<div class="form-grid">'
+      + '<div class="field"><label class="field-label">Name *</label><input type="text" id="sfName" value="' + s.name + '"></div>'
+      + '<div class="field"><label class="field-label">Category</label><input type="text" id="sfCat" value="' + s.category + '"></div>'
+      + '<div class="field"><label class="field-label">Price</label><input type="text" id="sfPrice" value="' + (s.price || "") + '"></div>'
+      + '<div class="field"><label class="field-label">Goal tag (recommendations)</label><select id="sfGoal">' + ["muscle","loss","endurance","mobility"].map(g => '<option' + (s.goal === g ? " selected" : "") + '>' + g + '</option>').join("") + '</select></div>'
+      + '<div class="field"><label class="field-label">Stock quantity</label><input type="number" id="sfStock" value="' + s.stock + '"></div>'
+      + '<div class="field"><label class="field-label">Low-stock threshold</label><input type="number" id="sfLow" value="' + s.low + '"></div>'
+      + '</div>'
+      + '<div class="modal-actions"><button class="btn ghost" id="sfCancel">Cancel</button><button class="btn" id="sfSave">Save</button></div>', 560);
+    document.getElementById("sfCancel").onclick = closeAdminModal;
+    document.getElementById("sfSave").onclick = function(){
+      const name = document.getElementById("sfName").value.trim();
+      if (!name){ toast("Name is required."); return; }
+      const rec = {
+        name: name,
+        category: document.getElementById("sfCat").value.trim() || "General",
+        price: document.getElementById("sfPrice").value.trim(),
+        goal: document.getElementById("sfGoal").value,
+        stock: Math.max(0, Number(document.getElementById("sfStock").value) || 0),
+        low: Math.max(0, Number(document.getElementById("sfLow").value) || 0)
+      };
+      if (isNew){ rec.active = true; supplements.push(rec); }
+      else supplements[i] = Object.assign({}, supplements[i], rec);
+      saveSupps();
+      renderSuppMgmt(); renderInventory(); renderSupplementRecs(); renderLowStock();
+      closeAdminModal();
+      toast(name + " saved.");
+    };
+  }
+  document.getElementById("btnAddSupp").addEventListener("click", function(){ openSuppForm(null); });
+  document.getElementById("view-supplements").addEventListener("click", function(e){
+    const ed = e.target.closest("[data-sedit]"), tg = e.target.closest("[data-stoggle]");
+    if (ed) openSuppForm(Number(ed.dataset.sedit));
+    if (tg){
+      const i = Number(tg.dataset.stoggle);
+      supplements[i].active = supplements[i].active === false ? true : false;
+      saveSupps(); renderSuppMgmt(); renderInventory(); renderLowStock();
+      toast(supplements[i].name + (supplements[i].active === false ? " deactivated." : " activated."));
+    }
+  });
+
+  /* ======================================================================
+     9) COACH MANAGEMENT
+     ====================================================================== */
+  function renderCoachMgmt(){
+    document.getElementById("coachMgmtTable").innerHTML = coaches.map(function(c, i){
+      return '<tr>'
+      + '<td><div style="font-weight:600;">' + c.name + '</div><div class="stat-sub">' + (c.specialty || "") + '</div></td>'
+      + '<td class="stat-sub">' + (c.phone || "—") + ((c.phone && c.email) ? "<br>" : "") + (c.email || "") + '</td>'
+      + '<td>' + (c.onsite ? '<span class="pill ok">On-site</span>' : '<span class="pill warn">Off-site</span>') + ' '
+      + (c.active === false ? '<span class="pill bad">Inactive</span>' : '<span class="pill ok">Active</span>') + '</td>'
+      + '<td><div class="tbl-actions"><button class="btn ghost small" data-cedit="' + i + '">Edit</button>'
+      + '<button class="btn ghost small" data-ctoggle="' + i + '">' + (c.active === false ? "Activate" : "Deactivate") + '</button></div></td></tr>';
+    }).join("");
+  }
+  function initialsOf(name){
+    const w = name.trim().split(/\s+/);
+    return (w.length > 1 ? w[w.length - 2][0] + w[w.length - 1][0] : name.slice(0, 2)).toUpperCase();
+  }
+  function openCoachForm(i){
+    const isNew = i === null;
+    const c = isNew ? {name:"", specialty:"", style:"", tags:[], phone:"", email:"", onsite:true} : coaches[i];
+    openAdminModal('<h3>' + (isNew ? "Add coach" : "Edit coach") + '</h3>'
+      + '<div class="form-grid">'
+      + '<div class="field"><label class="field-label">Full name *</label><input type="text" id="cfName" value="' + c.name + '"></div>'
+      + '<div class="field"><label class="field-label">Specialization</label><input type="text" id="cfSpec" value="' + (c.specialty || "") + '"></div>'
+      + '<div class="field"><label class="field-label">Phone</label><input type="tel" id="cfPhone" value="' + (c.phone || "") + '"></div>'
+      + '<div class="field"><label class="field-label">Email</label><input type="email" id="cfEmail" value="' + (c.email || "") + '"></div>'
+      + '<div class="field"><label class="field-label">Tags (comma separated)</label><input type="text" id="cfTags" value="' + (c.tags || []).join(", ") + '"></div>'
+      + '<div class="field"><label class="field-label">Location</label><select id="cfOnsite"><option value="1"' + (c.onsite ? " selected" : "") + '>On-site</option><option value="0"' + (c.onsite ? "" : " selected") + '>Off-site / personal</option></select></div>'
+      + '</div>'
+      + '<div class="field"><label class="field-label">Coaching style</label><input type="text" id="cfStyle" value="' + (c.style || "") + '"></div>'
+      + '<div class="modal-actions"><button class="btn ghost" id="cfCancel">Cancel</button><button class="btn" id="cfSave">Save coach</button></div>', 560);
+    document.getElementById("cfCancel").onclick = closeAdminModal;
+    document.getElementById("cfSave").onclick = function(){
+      const name = document.getElementById("cfName").value.trim();
+      if (!name){ toast("Coach name is required."); return; }
+      const rec = {
+        name: name,
+        initials: isNew ? initialsOf(name.replace(/^coach\s+/i, "")) : coaches[i].initials,
+        specialty: document.getElementById("cfSpec").value.trim(),
+        style: document.getElementById("cfStyle").value.trim(),
+        tags: document.getElementById("cfTags").value.split(",").map(s => s.trim()).filter(Boolean),
+        phone: document.getElementById("cfPhone").value.trim(),
+        email: document.getElementById("cfEmail").value.trim(),
+        onsite: document.getElementById("cfOnsite").value === "1"
+      };
+      if (isNew){ rec.active = true; coaches.push(rec); }
+      else coaches[i] = Object.assign({}, coaches[i], rec);
+      saveCoaches();
+      renderCoachMgmt(); renderCoaches();
+      enableTilt(document.querySelectorAll("#coachGrid .coach-card"));
+      closeAdminModal();
+      toast(name + " saved.");
+    };
+  }
+  document.getElementById("btnAddCoach").addEventListener("click", function(){ openCoachForm(null); });
+  document.getElementById("view-coach").addEventListener("click", function(e){
+    const ed = e.target.closest("[data-cedit]"), tg = e.target.closest("[data-ctoggle]");
+    if (ed) openCoachForm(Number(ed.dataset.cedit));
+    if (tg){
+      const i = Number(tg.dataset.ctoggle);
+      coaches[i].active = coaches[i].active === false ? true : false;
+      saveCoaches(); renderCoachMgmt(); renderCoaches();
+      toast(coaches[i].name + (coaches[i].active === false ? " deactivated." : " activated."));
+    }
+  });
+
+  /* ======================================================================
+     10) WORKOUT PLAN MANAGEMENT + ASSIGNMENT
+     ====================================================================== */
+  function renderWPlanList(){
+    const wrap = document.getElementById("wplanList");
+    if (!customPlans.length){
+      wrap.innerHTML = '<p class="empty">No custom workout plans yet — add one below, or use the generator above.</p>';
+    } else {
+      wrap.innerHTML = '<div style="overflow-x:auto;"><table><thead><tr><th>Plan</th><th>Goal</th><th>Level</th><th>Exercises</th><th>Status</th><th>Actions</th></tr></thead><tbody>'
+        + customPlans.map(function(p, i){
+          return '<tr><td style="font-weight:600;">' + p.name + '</td><td>' + p.goal + '</td><td>' + p.level + '</td><td class="mono">' + (p.exercises || []).length + '</td>'
+          + '<td>' + (p.active === false ? '<span class="pill warn">Inactive</span>' : '<span class="pill ok">Active</span>') + '</td>'
+          + '<td><div class="tbl-actions"><button class="btn ghost small" data-wedit="' + i + '">Edit</button>'
+          + '<button class="btn ghost small" data-wtoggle="' + i + '">' + (p.active === false ? "Activate" : "Deactivate") + '</button></div></td></tr>';
+        }).join("")
+        + '</tbody></table></div>';
+    }
+    document.getElementById("assignPlanSelect").innerHTML = '<option value="">— Select plan —</option>'
+      + customPlans.filter(p => p.active !== false).map(function(p, i){ return '<option value="' + i + '">' + p.name + '</option>'; }).join("");
+  }
+  function renderAssignedList(){
+    const wrap = document.getElementById("assignedList");
+    const assigned = members.filter(m => m.assignedPlan);
+    wrap.innerHTML = assigned.length
+      ? assigned.map(m => '<div class="report-row"><div><div class="report-name">' + m.name + '</div><div class="report-sub">' + m.assignedPlan + '</div></div><button class="btn ghost small" data-unassign-plan="' + members.indexOf(m) + '">Remove</button></div>').join("")
+      : '<p class="empty">No members have an assigned plan yet.</p>';
+  }
+  function openWPlanForm(i){
+    const isNew = i === null;
+    const p = isNew ? {name:"", goal:"muscle", level:"beginner", exercises:[]} : customPlans[i];
+    const exText = (p.exercises || []).map(e => [e.name, e.sets, e.reps, e.load].join(" | ")).join("\n");
+    openAdminModal('<h3>' + (isNew ? "Add workout plan" : "Edit workout plan") + '</h3>'
+      + '<div class="form-grid">'
+      + '<div class="field"><label class="field-label">Plan name *</label><input type="text" id="wfName" value="' + p.name + '"></div>'
+      + '<div class="field"><label class="field-label">Goal</label><select id="wfGoal">' + ["muscle","loss","endurance","mobility"].map(g => '<option' + (p.goal === g ? " selected" : "") + '>' + g + '</option>').join("") + '</select></div>'
+      + '<div class="field"><label class="field-label">Level</label><select id="wfLevel">' + ["beginner","intermediate","advanced"].map(l => '<option' + (p.level === l ? " selected" : "") + '>' + l + '</option>').join("") + '</select></div>'
+      + '</div>'
+      + '<div class="field"><label class="field-label">Exercises (one per line: Name | sets | reps | load)</label><textarea id="wfEx" rows="6" placeholder="Barbell squat | 5 | 5 | 80 kg">' + exText + '</textarea></div>'
+      + '<div class="modal-actions"><button class="btn ghost" id="wfCancel">Cancel</button><button class="btn" id="wfSave">Save plan</button></div>', 560);
+    document.getElementById("wfCancel").onclick = closeAdminModal;
+    document.getElementById("wfSave").onclick = function(){
+      const name = document.getElementById("wfName").value.trim();
+      if (!name){ toast("Plan name is required."); return; }
+      const exercises = document.getElementById("wfEx").value.split("\n").map(l => l.trim()).filter(Boolean).map(function(l){
+        const parts = l.split("|").map(s => s.trim());
+        return { name: parts[0] || "Exercise", sets: parts[1] || "", reps: parts[2] || "", load: parts[3] || "" };
+      });
+      const rec = { name: name, goal: document.getElementById("wfGoal").value, level: document.getElementById("wfLevel").value, exercises: exercises };
+      if (isNew){ rec.active = true; customPlans.push(rec); }
+      else customPlans[i] = Object.assign({}, customPlans[i], rec);
+      saveWPlans();
+      renderWPlanList();
+      closeAdminModal();
+      toast('Workout plan "' + name + '" saved.');
+    };
+  }
+  document.getElementById("btnAddWPlan").addEventListener("click", function(){ openWPlanForm(null); });
+  document.getElementById("btnAssignPlan").addEventListener("click", function(){
+    const pi = document.getElementById("assignPlanSelect").value;
+    const mi = document.getElementById("assignMemberSelect").value;
+    if (pi === "" || mi === ""){ toast("Pick both a plan and a member."); return; }
+    const m = members[Number(mi)];
+    m.assignedPlan = customPlans[Number(pi)].name;
+    persistMembers();
+    renderAssignedList();
+    toast('Assigned "' + m.assignedPlan + '" to ' + m.name + ".");
+  });
+  document.getElementById("view-workout").addEventListener("click", function(e){
+    const ed = e.target.closest("[data-wedit]"), tg = e.target.closest("[data-wtoggle]"), ua = e.target.closest("[data-unassign-plan]");
+    if (ed) openWPlanForm(Number(ed.dataset.wedit));
+    if (tg){
+      const i = Number(tg.dataset.wtoggle);
+      customPlans[i].active = customPlans[i].active === false ? true : false;
+      saveWPlans(); renderWPlanList();
+      toast('"' + customPlans[i].name + '"' + (customPlans[i].active === false ? " deactivated." : " activated."));
+    }
+    if (ua){
+      const m = members[Number(ua.dataset.unassignPlan)];
+      if (m){ m.assignedPlan = ""; persistMembers(); renderAssignedList(); toast("Assignment removed for " + m.name + "."); }
+    }
+  });
+
+  /* ======================================================================
+     11) SETTINGS
+     ====================================================================== */
+  function applySettings(){
+    const bn = document.querySelector(".brand-name");
+    if (bn && bn.childNodes.length) bn.childNodes[0].textContent = gymSettings.gymName || "IRON GYM";
+    document.title = (gymSettings.gymName || "IRON GYM") + " — Management System";
+  }
+  function loadSettingsForm(){
+    document.getElementById("setName").value = gymSettings.gymName || "";
+    document.getElementById("setAddress").value = gymSettings.address || "";
+    document.getElementById("setPhone").value = gymSettings.phone || "";
+    document.getElementById("setEmail").value = gymSettings.email || "";
+    document.getElementById("setHours").value = gymSettings.hours || "";
+  }
+  document.getElementById("btnSaveSettings").addEventListener("click", function(){
+    gymSettings = {
+      gymName: document.getElementById("setName").value.trim() || "IRON GYM",
+      address: document.getElementById("setAddress").value.trim(),
+      phone: document.getElementById("setPhone").value.trim(),
+      email: document.getElementById("setEmail").value.trim(),
+      hours: document.getElementById("setHours").value.trim()
+    };
+    saveSettings();
+    applySettings();
+    toast("Settings saved.");
+  });
+
+  /* ================= Admin features end ================= */
+
+  /* ---------------- Init ---------------- */
+  renderCoaches();
+  renderMembersTable();
+  renderNFCCards();
+  renderHistory();
+  renderAttendance();
+  renderPaymentHistory();
+  renderPendingPayments();
+  renderPlanMgmt();
+  renderSuppMgmt();
+  renderCoachMgmt();
+  renderWPlanList();
+  renderAssignedList();
+  loadSettingsForm();
+  applySettings();
+  applyNavPermissions();
+  renderDashboardExtras();
+  fillMemberSelects();
+  generateReport();
+  renderInventory();
+  renderSupplementRecs();
+  renderPlans();
+  applyRolePermissions();
+  setView("dashboard");
+  renderCheckinLineChart();
+  renderMembershipDonut();
+  enableTilt(document.querySelectorAll("#coachGrid .coach-card"));
+  initScrollReveal();
+  let resizeTimer;
+  window.addEventListener("resize", ()=>{
+    moveNavIndicator(document.querySelector(".navbtn.active"));
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(renderCheckinLineChart, 150);
+  });
+  if(document.fonts && document.fonts.ready){
+    document.fonts.ready.then(()=> moveNavIndicator(document.querySelector(".navbtn.active")));
+  }
+
+  // Simulate the dashboard pulling live numbers from the database:
+  // stat cards start as shimmering skeletons, then settle into place.
+  setTimeout(()=>{
+    document.querySelectorAll(".stat .num").forEach(n=>n.classList.remove("skeleton"));
+    renderCheckinLog();
+    renderLowStock();
+    animateNumber(document.getElementById("statMembers"), activeMemberCount(), 900);
+    animateNumber(document.getElementById("statCoaches"), coaches.length, 900);
+  }, reduceMotion ? 0 : 550);
+
+  // Close the main FitSphere application IIFE.
+  })();
+</script>
+</body>
+</html>
